@@ -6,11 +6,15 @@
     <title>Consulta de cliente</title>
 </head>
 <body>
-    <h1>Informe o nome ou cpf para consulta:</h1>
+    <h1>Informe o  cpf do cliente que voçê deseja excluir ou alterar cadastro:</h1>
     <form>
-        <p>Nome : <input type="text" name="cliente" id="cliente"></p>
+        
         <p>CPF : <input type="text" name="cpf" id="cpf"></p>
-        <input type="submit" name="Consultar" id="consultar">
+       Ação:<select name="formaPagamento">
+            <option value="1">Excluir</option>
+            <option value="2">Alterar</option>
+           </select>
+        <input type="submit" name="Consultar" id="consultar" value="Confirmar">
     </form>
 </body>
 </html>
