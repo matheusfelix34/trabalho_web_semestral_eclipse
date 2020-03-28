@@ -4,17 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Consulta de cliente</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script>
+        function actExcluir(){
+            document.forms[0].action= "exclusao_de_cliente.html"
+            document.forms[0].submit()
+        }
+        function actAlterar(){
+            document.forms[0].action= "alteracao.html"
+            document.forms[0].submit()
+        }
+    </script>
 </head>
 <body>
-    <h1>Informe o  cpf do cliente que voçê deseja excluir ou alterar cadastro:</h1>
-    <form>
-        
-        <p>CPF : <input type="text" name="cpf" id="cpf"></p>
-       Ação:<select name="formaPagamento">
-            <option value="1">Excluir</option>
-            <option value="2">Alterar</option>
-           </select>
-        <input type="submit" name="Consultar" id="consultar" value="Confirmar">
+    <h1 class="display-3 text-center">Consulta de cliente:</h1>
+
+    <form action="" id="formulario">
+        <div class="container border">
+            <div class="form-group">
+                <label for="cpf">CPF: </label>
+                <input type="text" name="cpf" id="cpf" class="form-control" required>
+            </div>
+                <div class="text-center">
+                <input type="button" value="Excluir" onclick="actExcluir()" class="btn btn-primary">
+                <input type="button" value="Alterar" onclick="actAlterar()" class="btn btn-primary">
+            </div>
+            <br>
+        </div>
     </form>
 </body>
 </html>
