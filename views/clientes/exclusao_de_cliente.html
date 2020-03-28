@@ -4,15 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Exclusão de usuario</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script>
+        function actExcluir(){
+            document.forms[0].action= "exclusao_sucedida.html"
+            document.forms[0].submit()
+        }
+        function actDesfazer(){
+            document.forms[0].action= "../index.html"
+            document.forms[0].submit()
+        }
+    </script>
 </head>
 <body>
 
   
-    <h1>Tem certeza  que deseja excluir o cadastro do usuario?:ex</h1>
-    <form>
-        <input type="radio" name="opcao" value="sim" disabled> Sim
-  <input type="radio" name="opcao" value="nao" disabled> Não
-        <input type="submit" name="Excluir" id="confirmar">
+    <h1 class="display-4 text-center">Tem certeza  que deseja excluir o cadastro do usuario?</h1>
+    <br><br>
+    <form id="formulario" action="">
+        <div class="container border text-center">
+            <br><br>
+            <input type="button" id="confirmar" value="Excluir" class="btn btn-danger" onclick="actExcluir()">
+            <input type="button" id="desfazer" value="Não excluir" class="btn btn-success" onclick="actDesfazer()">
+            <br><br>
+        </div>
     </form>
 </body>
 </html>
