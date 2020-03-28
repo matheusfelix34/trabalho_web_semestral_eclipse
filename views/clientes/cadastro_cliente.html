@@ -3,15 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cliente</title>
+    <title>Cadastro de cliente</title>
 </head>
 <body>
-    <form>
-        <p>Nome : <input type="text" name="cliente" id="cliente"></p>
-        <p>CPF : <input type="text" name="cpf" id="cpf"></p>
-        <p>Data de nascimento : <input type="date" name="idade" id="idade"></p>
-        <input type="submit" name="enviar" id="enviar">
-    </form>
+    <h1>Cadastro</h1>
+    <form action="">
+        <label for="fname">Nome</label><br>
+        <input type="text" id="fname" name="fname"><br>
+        <label for="cpf">Cpf</label><br>
+        <input type="text" id="cpf" name="cpf" maxlength="14" readonly><br>
+        <label for="rg">Rg</label><br>
+        <input type="text" id="rg" name="rg" readonly><br>
+        <label for="dt">Data de Nascimento</label><br>
+        <input type="date" id="dt" name="dt" readonly><br>
+         <label for="ender">Endereço</label><br>
+        <input type="text" id="ender" name="ender"><br>
+        <label for="sex">Sexo:</label>
+        <input type="radio" name="sex" value="masculino"> Masculino
+        <input type="radio" name="sex" value="feminino"> Feminino
+        <br><br>
+  <label for="senha">Senha :</label>
+  <input type="password" id="senha" name="password" minlength="8" required>
+      
+      <br><br>
+        <input type="submit" value="Cadstrar">
+      </form> 
     
     
 </body>
