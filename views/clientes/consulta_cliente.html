@@ -7,12 +7,18 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <script>
         function actExcluir(){
+            var cpf = document.getElementById("cpf").value
+            if(cpf != null && cpf != ""){
             document.forms[0].action= "exclusao_de_cliente.html"
             document.forms[0].submit()
+            }
         }
         function actAlterar(){
+            var cpf = document.getElementById("cpf").value
+            if(cpf != null && cpf.trim() != ""){
             document.forms[0].action= "alteracao.html"
             document.forms[0].submit()
+            }
         }
     </script>
 </head>
