@@ -4,13 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Produtos</title>
+    <link href="..\..\bootstrap\css\bootstrap.min.css" rel="stylesheet">
+    <script type="text/javascript">
+		function msg() {
+ 	 		alert("Produto cadastrado com sucesso!");
+		}
+</script>
 </head>
 <body>
     <form>
         Nome produto:<input type="text" name="produto" id="produto"><br><br>
         Valor produto:<input type="number" name="valor" id="valor">
         <br><br>
-        <input type="submit" name="enviar" id="enviar">
+        <input type="submit" name="enviar" id="enviar" onclick="msg()">
     </form>
    
 </body>
