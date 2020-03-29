@@ -4,16 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Exclusão de usuario</title>
+    <script type="text/javascript">
+    function getChoice(){
+   var yes = document.getElementById("yes");
+   var no = document.getElementById("no");
+   if(yes.checked==true){
+     window.location.href = "exclusao_sucedida.html";
+   }else{
+    window.location.href = "consulta_produto.html";
+   }
+}
+    
+     </script>
 </head>
 <body>
 
   
     <h1>Tem certeza  que deseja excluir o cadastro do produto?</h1>
     <form>
-        <input type="radio" name="opcao" value="sim" disabled> Sim
-  <input type="radio" name="opcao" value="nao" disabled> Não
+        <input id ="yes" type="radio" name="opcao" value="sim" > Sim
+        <input id ="no" type="radio" name="opcao" value="nao" checked> Não
   <br><br>
-        <input type="submit" name="Excluir" id="confirmar">
+        <input value ="Confirmar" type="button" name="Excluir" id="confirmar" onclick="getChoice();"> 
     </form>
 </body>
 </html>
