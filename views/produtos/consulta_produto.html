@@ -4,18 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Consulta de cliente</title>
+        <link href="..\..\bootstrap\css\bootstrap.min.css" rel="stylesheet">
+     <script type="text/javascript">
+    function getChoice(){
+   var rd1 = document.getElementById("rad1");
+   var rd2 = document.getElementById("rad2");
+   if(rd1.checked==true){
+     window.location.href = "exclusao_de_produto.html";
+   }else{
+    window.location.href = "alteracao.html";
+   }
+}
+    
+     </script>
 </head>
 <body>
     <h1>Informe o  nome do produto que voçê deseja excluir ou alterar cadastro:</h1>
     <form>
         
         <p>Produto : <input type="text" name="produto" id="produto"></p>
-       Ação:<select name="opcao">
-            <option value="1">Excluir</option>
-            <option value="2">Alterar</option>
-           </select>
+        <p>ID produto : <input type="number" name="idproduto" id="idproduto"></p>
+       Operação:
+            <input id="rad1"  name="group1" type="radio">Excluir</option>
+            <input  id="rad2" name="group1" type="radio">Alterar</option>
+
            <br><br>
-        <input type="submit" name="Consultar" id="consultar" value="Confirmar">
+        <input type="button" name="Consultar" id="consultar" value="Confirmar" onclick="getChoice();">
     </form>
 </body>
 </html>
