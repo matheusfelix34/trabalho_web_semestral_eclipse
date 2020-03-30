@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finalizar compra</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script>
+        function actConfirmar(){
+            document.forms[0].action= "../loja/index.html"
+            document.forms[0].submit()
+        }
+        function actDesistir(){
+            document.forms[0].action= "fechar_compra.html"
+            document.forms[0].submit()
+        }
+    </script>
+</head>
+<body>
+    <h1 class="display-3 text-center">Deseja finalizar a compra?</h1>
+    <br><br>
+    <table class="table container">
+        <thead class="thead-dark">
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Nome do produto</th>
+              <th scope="col">Valor</th>
+              <th scope="col">Quantidade</th>
+            </tr>
+          </thead>
+          <tr>
+            <th scope="row">1</th>
+            <td>Máscara</td>
+            <td>R$ 10,00</td>
+            <td>5</td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>Álcool em gel</td>
+            <td>R$ 18,00</td>
+            <td>10</td>
+          </tr>
+    </table>
+    <form action="../loja/index.html">
+        <div class="text-center">
+            <input type="submit" value="Confirmar" class="btn btn-success">
+            <input type="submit" value="Voltar" class="btn btn-secondary">
+        </div>
+    </form>
+</body>
+</html>
