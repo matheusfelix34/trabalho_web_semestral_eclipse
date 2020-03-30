@@ -5,7 +5,7 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="canonical" href="https://html5-templates.com/" />
-    <title>Relatorio_usuario</title>
+    <title>Relatorio_pedidos</title>
 	<meta name="description" content="A minimalist Bootstrap theme by StartBootstrap. Contains everything you need to get started building your website. All you have to do is change the text and images.">
     <link href="../../css/bootstrap.min.css" rel="stylesheet">
     <link href="../../css/modern-business.css" rel="stylesheet">
@@ -191,11 +191,13 @@ function FormataStringData(data) {
     <div class="container">
         <br><br><br>
 
-        <h2>Relatorio de compras do suario:</h2>
-        <!-- <p>Selececine o intervalo para o relatorio</p> -->
+        <h2>Relatorio de compras por data:</h2>
+        <p>Selececine o intervalo para o relatorio</p>
 
    
-      
+          <p>Data incial : <input type="date" name="data_incial" id="data_incial" required></p>
+          <p>Data final  : <input type="date" name="data_final" id="data_final" required></p>
+          <p>Agora é só:</p><input type="button" value="Pesquisar" class="btn btn-success" onclick="Pesquisar()">
 
           <table class="table" id="tabela">
             <thead>
@@ -203,24 +205,25 @@ function FormataStringData(data) {
                 <th scope="col">Nº</th>
                 <th>Numeração do pedido</th>
                 <th>Data do pedido</th>
+                
               </tr>
             </thead>
             <tbody id="corpo">
-              <tr>
-                <th scope="row">1</th>
-                <td>485511651656565165</td>
-                <td>29/03/2020</td>
+              <!-- <tr>
+                <th scope="row"></th>
+                <td>  </td>
+                <td> </td>
               </tr>
               <tr>
-                <th scope="row">2</th>
-                <td>789511651656565165</td>
-                <td>18/03/2020</td>
+                <th scope="row"></th>
+                <td>  </td>
+                <td> </td>
               </tr>
               <tr>
-                <th scope="row">3</th>
-                <td>658511651656565165</td>
-                <td>05/03/2020</td>
-              </tr>
+                <th scope="row"></th>
+                <td>  </td>
+                <td> </td>
+              </tr> -->
             </tbody>
           </table>
 
