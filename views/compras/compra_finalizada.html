@@ -11,14 +11,26 @@
     <link href="../../css/modern-business.css" rel="stylesheet">
     <link href="../../font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <script>
-        function actConfirmar(){
+function actExcluir(){
+    alert('compra realizada com sucesso');
             document.forms[0].action= "../loja/index.html"
             document.forms[0].submit()
         }
-        function actDesistir(){
-            document.forms[0].action= "fechar_compra.html"
+        function actDesfazer(){
+            document.forms[0].action= "carrinho.html"
             document.forms[0].submit()
         }
+
+
+        // function actConfirmar(){
+        //     alert('compra realizada com sucesso');
+        //     document.forms[0].action= "../loja/index.html"
+        //     document.forms[0].submit()
+        // }
+        // function actDesistir(){
+        //     document.forms[0].action= "fechar_compra.html"
+        //     document.forms[0].submit()
+        // }
     </script>
 </head>
 <body>
@@ -89,7 +101,10 @@
                     <ul class="dropdown-menu">
                         <li class="active">
                             <a href="../clientes/alteracao.html">Alterar conta</a>
-                        </li>                          
+                        </li>       
+                        <li class="active">
+                            <a href="../loja/login.html">Sair</a>
+                        </li>                     
                     </ul>
                 </li>
                 
@@ -125,12 +140,24 @@
             <td>10</td>
           </tr>
     </table>
-    <form action="../loja/index.html">
+    <!-- <form action="">
         <div class="text-center">
             <input type="submit" value="Confirmar" class="btn btn-success">
             <input type="submit" value="Voltar" class="btn btn-secondary">
         </div>
+    </form> -->
+
+
+    <form id="formulario" action="">
+        <div class="container border text-center">
+            <br><br>
+            <input type="button" id="confirmar" value="Confirmar" class="btn btn-danger" onclick="actExcluir()">
+            <input type="button" id="desfazer" value="Voltar" class="btn btn-success" onclick="actDesfazer()">
+            <br><br>
+        </div>
     </form>
+
+    
 </div>
 <script src="../../js/jquery.js"></script>
 
