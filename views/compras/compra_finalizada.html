@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8">
@@ -117,10 +117,37 @@
             <td>10</td>
           </tr>
     </table>
-    <form action="../loja/index.html">
+    <form action="../loja/carrinho.html">
         <div class="text-center">
-            <input type="submit" value="Confirmar" class="btn btn-success">
-            <input type="submit" value="Voltar" class="btn btn-secondary">
+       <html>
+<head>
+<title>Tutorial de Alert em JavaScript - Linha de Código</title>
+</head>
+<body>
+ 
+<button onclick="funcao1()">Confimar compra</button>
+ 
+<p id="demo"></p>
+ 
+<script>
+function funcao1()
+{
+var x;
+var r=confirm("Deseja confirmar a compra?");
+if (r==true)
+  {
+  x="você pressionou Ok!";
+  }
+else                            
+  {
+  x="Você pressionou Cancelar!";
+  }
+document.getElementById("demo").innerHTML=x;
+}
+</script>
+ <input type="submit" value="Voltar" class="btn btn-secondary">
+</body>
+</html>
         </div>
     </form>
 </div>
