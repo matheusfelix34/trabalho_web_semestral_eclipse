@@ -12,15 +12,25 @@
     <link href="../../font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <script type="text/javascript">
 		function msg() {
- 	 		alert("Produto cadastrado com sucesso!");
+
+            var nome = document.getElementById("produto").value;
+            var valor = document.getElementById("valor").value;
+            if(nome != "" && valor != ""){
+                alert("Produto cadastrado com sucesso!");
+            }else{
+                alert("Preencha todos os campos para cadastrar um produto.");
+                
+            }
+
+ 	 		
 		}
 </script>
 </head>
 
 <body>
 
-    <!-- Navigation -->
-    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+     <!-- Navigation -->
+     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
         <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
@@ -70,10 +80,21 @@
                         </ul>
                     </li>
                     <li class="dropdown active">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Relatorios <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li class="active">
+                                <a href="../relatorios/consulta_cliente_relatorio.html">Pedidos por cliente</a>
+                            </li>
+                            <li>
+                                <a href="../relatorios/relatorio_pedidos_data.html">Pedidos por data</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="dropdown active">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Usuario <b class="caret"></b></a>
                         <ul class="dropdown-menu">
                             <li class="active">
-                                <a href="../loja/login.html">Alterar conta</a>
+                                <a href="../clientes/alteracao.html">Alterar conta</a>
                             </li>                          
                         </ul>
                     </li>
