@@ -1,36 +1,28 @@
-<!doctype html>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html>
 <html lang="en" class="no-js">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="canonical" href="https://html5-templates.com/" />
-    <title>Cadastro de produtos</title>
+	<title>Alteração de Cadastro</title>
 	<meta name="description" content="A minimalist Bootstrap theme by StartBootstrap. Contains everything you need to get started building your website. All you have to do is change the text and images.">
     <link href="../../css/bootstrap.min.css" rel="stylesheet">
     <link href="../../css/modern-business.css" rel="stylesheet">
     <link href="../../font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <script type="text/javascript">
+	  <script>
 		function msg() {
-
-            var nome = document.getElementById("produto").value;
-            var valor = document.getElementById("valor").value;
-            if(nome != "" && valor != ""){
-                alert("Produto cadastrado com sucesso!");
-            }else{
-                alert("Preencha todos os campos para cadastrar um produto.");
-                
-            }
-
- 	 		
+ 	 		alert("Produto alterado com sucesso!");
 		}
 </script>
 </head>
 
 <body>
 
-     <!-- Navigation -->
-     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
         <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
@@ -95,10 +87,10 @@
                         <ul class="dropdown-menu">
                             <li class="active">
                                 <a href="../clientes/alteracao.html">Alterar conta</a>
-                            </li>
+                            </li> 
                             <li class="active">
                                 <a href="../loja/login.html">Sair</a>
-                            </li>                           
+                            </li>                          
                         </ul>
                     </li>
                     
@@ -115,12 +107,17 @@
 
         <hr>
 
-       <form>
-        Nome produto:<input type="text" name="produto" id="produto"><br><br>
-        Valor produto:<input type="number" name="valor" id="valor">
-        <br><br>
-        <input type="submit" name="enviar" id="enviar" onclick="msg()">
-    </form>
+        <form action="">
+			<label for="produto">Novo nome do Produto</label><br>
+			<input type="text" id="produto" name="produto" required><br>
+			<label for="valor">Novo valor do Produto</label><br>
+			<input type="Number" id="valor" name="valor" required><br>
+		   
+		  
+		  <br><br>
+			<input type="submit" value="Salvar modificações" onclick="msg();">
+		  </form> 
+		  
    
         
         <!-- Footer -->
