@@ -39,6 +39,14 @@ public class Produto_srv extends HttpServlet {
 		if(opcao.equals("excluir")){
 			response.sendRedirect("views/produtos/exclusao_de_produto.jsp");
         }
+		if(opcao.equals("alteracao_concluida")){
+			response.sendRedirect("views/produtos/alteracao_concluida.jsp");
+        }
+		if(opcao.equals("excluisao_sucesso")){
+			response.sendRedirect("views/produtos/exclusao_sucedida.jsp");
+        }
+		
+		
 		
 		
 		
