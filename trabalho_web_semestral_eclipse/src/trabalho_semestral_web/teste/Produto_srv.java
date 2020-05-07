@@ -30,8 +30,27 @@ public class Produto_srv extends HttpServlet {
 		//response.getWriter().append("Served at: ").append(request.getContextPath());
 		String opcao =request.getParameter("opcao");
 		
+		if(opcao.equals("cadastro")){
+			response.sendRedirect("views/produtos/cadastro_concluido.jsp");
+        }
+		if(opcao.equals("alterar")){
+			response.sendRedirect("views/produtos/alteracao.jsp");
+        }
+		if(opcao.equals("excluir")){
+			response.sendRedirect("views/produtos/exclusao_de_produto.jsp");
+        }
 		
-		response.sendRedirect("views/produtos/cadastro_concluido.jsp");
+		
+		
+		
+		 /*String nome = request.getParameter("usuario");
+	        String senha = request.getParameter("senha");
+	         
+	        if(nome.equals("servlet") && senha.equals("12345")){
+	            response.sendRedirect("index.jsp");
+	        }*/
+		
+		
 	}
 
 	/**

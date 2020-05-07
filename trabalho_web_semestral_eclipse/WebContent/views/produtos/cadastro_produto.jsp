@@ -18,7 +18,7 @@
             var nome = document.getElementById("produto").value;
             var valor = document.getElementById("valor").value;
             if(nome != "" && valor != ""){
-                alert("Produto cadastrado com sucesso!");
+                //alert("Produto cadastrado com sucesso!");
             }else{
                 alert("Preencha todos os campos para cadastrar um produto.");
                 
