@@ -3,75 +3,32 @@
 <!DOCTYPE html>
 <html lang="en" class="no-js">
 <head>
- <meta charset="utf-8">
+    <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="canonical" href="https://html5-templates.com/" />
-    <title>Consultar produto</title>
+    <title>Cadastro de produtos</title>
 	<meta name="description" content="A minimalist Bootstrap theme by StartBootstrap. Contains everything you need to get started building your website. All you have to do is change the text and images.">
     <link href="../../css/bootstrap.min.css" rel="stylesheet">
     <link href="../../css/modern-business.css" rel="stylesheet">
     <link href="../../font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript">
+		function msg() {
 
-    <script>
-       
-       
-       /* function actExcluir(){
-            var cpf = document.getElementById("cpf").value
-            if(cpf != null && cpf != ""){
-            document.forms[0].action= "exclusao_de_cliente.html"
-            document.forms[0].submit()
-            }
-        }
-        function actAlterar(){
-            var cpf = document.getElementById("cpf").value
-            if(cpf != null && cpf.trim() != ""){
-            document.forms[0].action= "alteracao.html"
-            document.forms[0].submit()
-            }
-        }*/
-
-        
-        function mostrar_radio() {
-
-            var numeracao = document.getElementById("idproduto").value
-            console.log(numeracao);
-            if(numeracao != null && numeracao.trim() != ""){
-           
-                var radio = document.getElementsByName("group1");
-        
-        var radio_selected;
-        
-        for (var a = 0;  a < radio.length; a++) {
-            if (radio[a].checked) {
-                radio_selected = radio[a].value;
-            }
-        }
-        
-       
-       if(radio_selected=="excluir"){
-        document.forms[0].action= "exclusao_de_produto.html"
-            document.forms[0].submit()
-
-       }else if(radio_selected=="alterar"){
-        document.forms[0].action= "alteracao.html"
-            document.forms[0].submit()
-       }else{
-        alert("Escolha entre alterar ou excluir, por favor");
-       }
-       
-
-
+            var nome = document.getElementById("produto").value;
+            var valor = document.getElementById("valor").value;
+            if(nome != "" && valor != ""){
+                alert("Produto cadastrado com sucesso!");
             }else{
-                alert("Preencha o campo de  numeracao do produto, por favor");
+                alert("Preencha todos os campos para cadastrar um produto.");
+                
             }
 
-        
-       
-
-    };
-    </script>
+ 	 		
+		}
+</script>
 </head>
+
 <body>
 
      <!-- Navigation -->
@@ -140,10 +97,10 @@
                         <ul class="dropdown-menu">
                             <li class="active">
                                 <a href="../clientes/alteracao.html">Alterar conta</a>
-                            </li> 
+                            </li>
                             <li class="active">
                                 <a href="../loja/login.html">Sair</a>
-                            </li>                          
+                            </li>                           
                         </ul>
                     </li>
                     
@@ -158,20 +115,27 @@
     <!-- Page Content -->
     <div class="container">
 
+        <hr>
 
-        <h1>Informe o  nome do produto que voçê deseja excluir ou alterar cadastro:</h1>
-    <form name="form1" method="post" action="/trabalho_web_semestral_eclipse/Produto_srv">
+       <h1>Produto cadastrado com sucesso!</h1>
+   	
+  <button onclick="goBack()">Voltar</button>
+
+<script>
+function goBack() {
+  window.history.back();
+}
+</script>
         
-     
-        <p>Numeracao produto : <input type="number" name="idproduto" id="idproduto"></p>
-       Operação:
-            <input id="rad1"  name="group1" type="radio" value="excluir">Excluir</option>
-            <input  id="rad2" name="group1" type="radio" value="alterar">Alterar</option>
+        <!-- Footer -->
+        <footer>
+            <div class="row">
+                <div class="col-lg-12">
+                    <p>Copyright &copy; Loja  Virtual, 2020</p>
+                </div>
+            </div>
+        </footer>
 
-           <br><br>
-        <input type="button" name="Consultar" id="consultar" value="Confirmar" onclick="mostrar_radio();">
-          <input type="submit" name="enviar" id="enviar" onclick="msg()">
-    </form>
     </div>
     <!-- /.container -->
 
@@ -181,5 +145,8 @@
     <!-- Bootstrap Core JavaScript -->
     <script src="../../js/bootstrap.min.js"></script>
 
+
 </body>
+
+
 </html>
