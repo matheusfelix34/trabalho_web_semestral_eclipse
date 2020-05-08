@@ -18,7 +18,7 @@
       	   document.getElementById('form_consulta').submit();
         }
         function actDesfazer(){
-            document.forms[0].action= "consulta_produto.html"
+            document.forms[0].action= "consulta_produto.jsp"
             document.forms[0].submit()
         }
     </script>
