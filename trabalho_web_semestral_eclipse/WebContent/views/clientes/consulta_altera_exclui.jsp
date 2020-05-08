@@ -121,15 +121,19 @@
 
     <h1 class="display-3 text-center">Consulta de cliente:</h1>
 
-    <form action="" id="formulario">
+    <form id="formulario" method="post" action="/trabalho_semestral_web/teste/BuscarCliente.java">>
         <div class="container border">
             <div class="form-group">
                 <label for="cpf">CPF: </label>
                 <input type="text" name="cpf" id="cpf" class="form-control" required>
             </div>
             <div class="text-center">
-                <input type="button" value="Excluir" onclick="actExcluir()" class="btn btn-primary">
-                <input type="button" value="Alterar" onclick="actAlterar()" class="btn btn-primary">
+                <input type="radio" value="excluir"  > Excluir
+                <input type="radio" value="alterar"  > Alterar
+           		 <input type="hidden" name="opcao" id="opcao" value="">
+           		 	<br><br>
+           		
+           		<input style="background-color: black; border:0; color: white; padding: 10px;"type="submit" value="Enviar">
             </div>
             <br>
         </div>
