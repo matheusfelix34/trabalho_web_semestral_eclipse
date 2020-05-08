@@ -1,11 +1,13 @@
 package trabalho_semestral_web.teste;
 
 import java.io.IOException;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.util.ArrayList;
 
 /**
  * Servlet implementation class Produto_srv
@@ -31,6 +33,10 @@ public class Produto_srv extends HttpServlet {
 		String opcao =request.getParameter("opcao");
 		
 		if(opcao.equals("cadastro")){
+			ArrayList<String> bandas = new ArrayList<String> ();
+			String produto =request.getParameter("produto");
+			String valor= request.getParameter("valor");
+			
 			response.sendRedirect("views/produtos/cadastro_concluido.jsp");
         }
 		if(opcao.equals("alterar")){
