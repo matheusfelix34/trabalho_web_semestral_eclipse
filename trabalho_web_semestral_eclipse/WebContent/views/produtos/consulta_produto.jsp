@@ -16,7 +16,7 @@
     <script>
        
        
-        function actExcluir(){
+       /* function actExcluir(){
             var cpf = document.getElementById("cpf").value
             if(cpf != null && cpf != ""){
             document.forms[0].action= "exclusao_de_cliente.html"
@@ -29,7 +29,7 @@
             document.forms[0].action= "alteracao.html"
             document.forms[0].submit()
             }
-        }
+        }*/
 
         
         function mostrar_radio() {
@@ -50,12 +50,18 @@
         
        
        if(radio_selected=="excluir"){
-        document.forms[0].action= "exclusao_de_produto.html"
-            document.forms[0].submit()
+    	   document.getElementById('opcao').value="excluir";
+    	   document.getElementById('form_consulta').submit();
+    	  
+       /* document.forms[0].action= "exclusao_de_produto.html"
+            document.forms[0].submit()*/
 
        }else if(radio_selected=="alterar"){
-        document.forms[0].action= "alteracao.html"
-            document.forms[0].submit()
+    	   document.getElementById('opcao').value="alterar";
+    	   document.getElementById('form_consulta').submit();
+    	  
+        /*document.forms[0].action= "alteracao.html"
+            document.forms[0].submit()*/
        }else{
         alert("Escolha entre alterar ou excluir, por favor");
        }
@@ -160,16 +166,18 @@
 
 
         <h1>Informe o  nome do produto que voçê deseja excluir ou alterar cadastro:</h1>
-    <form>
+    <form name="form1" id="form_consulta" method="post" action="/trabalho_web_semestral_eclipse/Produto_srv">
         
      
         <p>Numeracao produto : <input type="number" name="idproduto" id="idproduto"></p>
        Operação:
             <input id="rad1"  name="group1" type="radio" value="excluir">Excluir</option>
             <input  id="rad2" name="group1" type="radio" value="alterar">Alterar</option>
+            <input type="hidden" name="opcao" id="opcao" value="">
 
            <br><br>
         <input type="button" name="Consultar" id="consultar" value="Confirmar" onclick="mostrar_radio();">
+       
     </form>
     </div>
     <!-- /.container -->

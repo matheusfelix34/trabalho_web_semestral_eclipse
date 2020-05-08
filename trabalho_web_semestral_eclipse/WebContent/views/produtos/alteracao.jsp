@@ -13,9 +13,7 @@
     <link href="../../css/modern-business.css" rel="stylesheet">
     <link href="../../font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 	  <script>
-		function msg() {
- 	 		alert("Produto alterado com sucesso!");
-		}
+		
 </script>
 </head>
 
@@ -107,15 +105,15 @@
 
         <hr>
 
-        <form action="">
+        <form name="form1" method="post" action="/trabalho_web_semestral_eclipse/Produto_srv">
 			<label for="produto">Novo nome do Produto</label><br>
 			<input type="text" id="produto" name="produto" required><br>
 			<label for="valor">Novo valor do Produto</label><br>
 			<input type="Number" id="valor" name="valor" required><br>
-		   
+		   <input type="hidden" name="opcao" id="opcao" value="alteracao_concluida">
 		  
 		  <br><br>
-			<input type="submit" value="Salvar modificações" onclick="msg();">
+			<input type="submit" value="Salvar modificações">
 		  </form> 
 		  
    

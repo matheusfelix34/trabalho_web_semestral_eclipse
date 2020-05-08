@@ -14,8 +14,8 @@
     <link href="../../font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <script>
         function actExcluir(){
-            document.forms[0].action= "exclusao_sucedida.html"
-            document.forms[0].submit()
+        	 document.getElementById('opcao').value="excluisao_sucesso";
+      	   document.getElementById('form_consulta').submit();
         }
         function actDesfazer(){
             document.forms[0].action= "consulta_produto.html"
@@ -109,11 +109,12 @@
     <div class="container">
   
         <h1>Tem certeza  que deseja excluir o cadastro do produto?</h1>
-        <form>
+        <form name="form1" id="form_consulta" method="post" action="/trabalho_web_semestral_eclipse/Produto_srv" >
            
       <br><br>
       <input type="button" id="confirmar" value="Excluir" class="btn btn-danger" onclick="actExcluir()">
       <input type="button" id="desfazer" value="Não excluir" class="btn btn-success" onclick="actDesfazer()">
+        <input type="hidden" name="opcao" id="opcao" value="">
         </form>
 </div>
 

@@ -1,0 +1,72 @@
+package trabalho_semestral_web.teste;
+
+import java.io.IOException;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+/**
+ * Servlet implementation class Produto_srv
+ */
+@WebServlet("/Produto_srv")
+public class Produto_srv extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+       
+    /**
+     * @see HttpServlet#HttpServlet()
+     */
+    public Produto_srv() {
+        super();
+        // TODO Auto-generated constructor stub
+    }
+
+	/**
+	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		//response.getWriter().append("Served at: ").append(request.getContextPath());
+		String opcao =request.getParameter("opcao");
+		
+		if(opcao.equals("cadastro")){
+			response.sendRedirect("views/produtos/cadastro_concluido.jsp");
+        }
+		if(opcao.equals("alterar")){
+			response.sendRedirect("views/produtos/alteracao.jsp");
+        }
+		if(opcao.equals("excluir")){
+			response.sendRedirect("views/produtos/exclusao_de_produto.jsp");
+        }
+		if(opcao.equals("alteracao_concluida")){
+			response.sendRedirect("views/produtos/alteracao_concluida.jsp");
+        }
+		if(opcao.equals("excluisao_sucesso")){
+			response.sendRedirect("views/produtos/exclusao_sucedida.jsp");
+        }
+		
+		
+		
+		
+		
+		
+		 /*String nome = request.getParameter("usuario");
+	        String senha = request.getParameter("senha");
+	         
+	        if(nome.equals("servlet") && senha.equals("12345")){
+	            response.sendRedirect("index.jsp");
+	        }*/
+		
+		
+	}
+
+	/**
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		doGet(request, response);
+	}
+
+}

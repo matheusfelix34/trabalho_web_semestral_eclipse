@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html lang="en" class="no-js">
 <head>
- <meta charset="utf-8">
+    <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="canonical" href="https://html5-templates.com/" />
@@ -18,7 +18,7 @@
             var nome = document.getElementById("produto").value;
             var valor = document.getElementById("valor").value;
             if(nome != "" && valor != ""){
-                alert("Produto cadastrado com sucesso!");
+                //alert("Produto cadastrado com sucesso!");
             }else{
                 alert("Preencha todos os campos para cadastrar um produto.");
                 
@@ -27,10 +27,11 @@
  	 		
 		}
 </script>
-<title>Insert title here</title>
 </head>
+
 <body>
-  <!-- Navigation -->
+
+     <!-- Navigation -->
      <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
         <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
@@ -116,9 +117,10 @@
 
         <hr>
 
-       <form>
+       <form name="form1" method="post" action="/trabalho_web_semestral_eclipse/Produto_srv">
         Nome produto:<input type="text" name="produto" id="produto"><br><br>
         Valor produto:<input type="number" name="valor" id="valor">
+        <input type="hidden" name="opcao" id="opcao" value="cadastro">
         <br><br>
         <input type="submit" name="enviar" id="enviar" onclick="msg()">
     </form>
@@ -142,5 +144,8 @@
     <!-- Bootstrap Core JavaScript -->
     <script src="../../js/bootstrap.min.js"></script>
 
+
 </body>
+
+
 </html>
