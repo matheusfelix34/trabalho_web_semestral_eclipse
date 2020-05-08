@@ -14,7 +14,7 @@
     <link href="../../font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
     <script>
-        function actExcluir(){
+       /* function actExcluir(){
             var cpf = document.getElementById("cpf").value
             if(cpf != null && cpf != ""){
                 document.forms[0].action= "exclusao_de_cliente.html"
@@ -28,6 +28,51 @@
                 document.forms[0].submit()
             }
         }
+        */
+        function mostrar_radio() {
+
+            var numeracao = document.getElementById("cpf").value
+            console.log(numeracao);
+            if(numeracao != null && numeracao.trim() != ""){
+           
+                var radio = document.getElementsByName("group1");
+        
+        var radio_selected;
+        
+        for (var a = 0;  a < radio.length; a++) {
+            if (radio[a].checked) {
+                radio_selected = radio[a].value;
+            }
+        }
+        
+       
+       if(radio_selected=="excluir"){
+    	   document.getElementById('opcao').value="excluir";
+    	   document.getElementById('formulario').submit();
+    	  
+       /* document.forms[0].action= "exclusao_de_produto.html"
+            document.forms[0].submit()*/
+
+       }else if(radio_selected=="alterar"){
+    	   document.getElementById('opcao').value="alterar";
+    	   document.getElementById('formulario').submit();
+    	  
+        /*document.forms[0].action= "alteracao.html"
+            document.forms[0].submit()*/
+       }else{
+        alert("Escolha entre alterar ou excluir, por favor");
+       }
+       
+
+
+            }else{
+                alert("Preencha o campo de cpf, por favor");
+            }
+
+        
+       
+
+    };
     </script>
 </head>
 
@@ -121,19 +166,19 @@
 
     <h1 class="display-3 text-center">Consulta de cliente:</h1>
 
-    <form id="formulario" method="post" action="/trabalho_semestral_web/teste/BuscarCliente.java">>
+    <form id="formulario" method="post" action="/trabalho_semestral_web/BuscarCliente">
         <div class="container border">
             <div class="form-group">
                 <label for="cpf">CPF: </label>
                 <input type="text" name="cpf" id="cpf" class="form-control" required>
             </div>
             <div class="text-center">
-                <input type="radio" value="excluir"  > Excluir
-                <input type="radio" value="alterar"  > Alterar
+                <input type="radio" name="group1" value="excluir"  > Excluir
+                <input type="radio" name="group1" value="alterar"  > Alterar
            		 <input type="hidden" name="opcao" id="opcao" value="">
            		 	<br><br>
            		
-           		<input style="background-color: black; border:0; color: white; padding: 10px;"type="submit" value="Enviar">
+           		<input style="background-color: black; border:0; color: white; padding: 10px;"type="submit" value="Enviar" onclick="mostrar_radio();">
             </div>
             <br>
         </div>

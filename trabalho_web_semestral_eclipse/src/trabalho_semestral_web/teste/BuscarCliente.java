@@ -27,19 +27,32 @@ public class BuscarCliente extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		response.getWriter().append("Served at: ").append(request.getContextPath());
+		// response.getWriter().append("Served at: ").append(request.getContextPath());
 		String opcao = request.getParameter("opcao");
 		
 		if(opcao.equals("excluir")){
 			response.sendRedirect("views/clientes/exclusao_de_cliente.jsp");
-	 }
+		}
         
 		if(opcao.equals("alterar")){
 			response.sendRedirect("views/clientes/alteracao.jsp");
         }
-		
+	   
+		if(opcao.equals("exclusao_sucesso")) {
+			response.sendRedirect("views/clientes/exclusao_sucedida.jsp");
 
+		}
+		if(opcao.equals("alterado_sucesso")) {
+			response.sendRedirect("views/loja/index.jsp");
+
+		}
+		if(opcao.equals("cadastrado_sucesso")) {
+			response.sendRedirect("views/loja/login.jsp");
+
+		}
 		
+		
+	
 	}
 
 	/**
