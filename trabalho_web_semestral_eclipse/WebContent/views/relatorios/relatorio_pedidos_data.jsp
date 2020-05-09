@@ -7,27 +7,114 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="canonical" href="https://html5-templates.com/" />
-    <title>Cadastro de produtos</title>
+    <title>Relatorio_pedidos</title>
 	<meta name="description" content="A minimalist Bootstrap theme by StartBootstrap. Contains everything you need to get started building your website. All you have to do is change the text and images.">
     <link href="../../css/bootstrap.min.css" rel="stylesheet">
     <link href="../../css/modern-business.css" rel="stylesheet">
     <link href="../../font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <script type="text/javascript">
-		function msg() {
 
-            var nome = document.getElementById("produto").value;
-            var valor = document.getElementById("valor").value;
-            if(nome != "" && valor != ""){
-            	document.getElementById('form1').submit();
-                
-            }else{
-                alert("Preencha todos os campos para cadastrar um produto.");
-                
-            }
+    <script>
+function Pesquisar(){
+    document.getElementById("corpo").innerHTML="";
+    var d1=document.getElementById('data_incial').value;
+    var data1=new Date(d1);
+    var d2=document.getElementById('data_final').value;
+    var data2=new Date(d2);
+    if(data1=="Invalid Date" || data2=="Invalid Date" ){
+        alert('Selecione as duas datas do intervalo,antes de clicar em pesquisar!')
+    }else{
 
- 	 		
-		}
-</script>
+        var pedidos = [
+//	116511651656565165
+    {
+        'numeracao': '485511651656565165',
+        'data': '29/03/2020',
+    },
+
+    {
+        'numeracao': '789511651656565165',
+        'data': '29/03/2020',
+    },
+
+    {
+        'numeracao': '658511651656565165',
+        'data': '29/03/2020',
+    },
+
+    {
+        'numeracao': '145511651656565165',
+        'data': '18/03/2020',
+    },
+
+    {
+        'numeracao': '369511651656565165',
+        'data': '18/03/2020',
+    },
+
+    {
+        'numeracao': '777511651656565165',
+        'data': '18/03/2020',
+    },
+
+    {
+        'numeracao': '888511651656565165',
+        'data': '05/03/2020',
+    },
+
+    {
+        'numeracao': '999511651656565165',
+        'data': '05/03/2020',
+    },
+
+    {
+        'numeracao': '999511651656565165',
+        'data': '05/03/2020',
+    },
+
+    
+
+];
+
+function FormataStringData(data) {
+  var dia  = data.split("/")[0];
+  var mes  = data.split("/")[1];
+  var ano  = data.split("/")[2];
+
+  return ano + '-' + ("0"+mes).slice(-2) + '-' + ("0"+dia).slice(-2);
+  
+}
+
+
+
+// console.log(data1.getTime());
+// console.log(data.getTime());
+
+
+
+
+
+       
+        for (var a = 0; a <pedidos.length; a ++) {
+
+            var data = new Date(FormataStringData(pedidos[a].data));
+            if( data.getTime() > data1.getTime() & data.getTime() < data2.getTime() ){
+                document.getElementById("corpo").innerHTML += '<tr> <th scope="row">'+a+'</th><td>'+pedidos[a].numeracao+'</td><td>'+pedidos[a].data+'</td></tr>';
+    
+    }
+           
+
+    
+}
+
+
+    }
+    
+  
+
+}
+
+    </script>
+
 </head>
 
 <body>
@@ -86,10 +173,10 @@
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Relatorios <b class="caret"></b></a>
                         <ul class="dropdown-menu">
                             <li class="active">
-                                <a href="../relatorios/consulta_cliente_relatorio.html">Pedidos por cliente</a>
+                                <a href="consulta_cliente_relatorio.html">Pedidos por cliente</a>
                             </li>
                             <li>
-                                <a href="../relatorios/relatorio_pedidos_data.html">Pedidos por data</a>
+                                <a href="relatorio_pedidos_data.html">Pedidos por data</a>
                             </li>
                         </ul>
                     </li>
@@ -98,10 +185,10 @@
                         <ul class="dropdown-menu">
                             <li class="active">
                                 <a href="../clientes/alteracao.html">Alterar conta</a>
-                            </li>
+                            </li>   
                             <li class="active">
                                 <a href="../loja/login.html">Sair</a>
-                            </li>                           
+                            </li>                        
                         </ul>
                     </li>
                     
@@ -115,20 +202,93 @@
 
     <!-- Page Content -->
     <div class="container">
+        <br><br><br>
+
+        <h2>Relatorio de compras por data:</h2>
+        <p>Selececine o intervalo para o relatorio</p>
+
+   
+          <p>Data incial : <input type="date" name="data_incial" id="data_incial" required></p>
+          <p>Data final  : <input type="date" name="data_final" id="data_final" required></p>
+          <p>Agora é só:</p><input type="button" value="Pesquisar" class="btn btn-success" onclick="Pesquisar()">
+
+          <table class="table" id="tabela">
+            <thead>
+              <tr>
+                <th scope="col">Nº</th>
+                <th>Numeração do pedido</th>
+                <th>Data do pedido</th>
+                
+              </tr>
+            </thead>
+            <tbody id="corpo">
+              <!-- <tr>
+                <th scope="row"></th>
+                <td>  </td>
+                <td> </td>
+              </tr>
+              <tr>
+                <th scope="row"></th>
+                <td>  </td>
+                <td> </td>
+              </tr>
+              <tr>
+                <th scope="row"></th>
+                <td>  </td>
+                <td> </td>
+              </tr> -->
+            </tbody>
+          </table>
+
+        
+        
+        
+
+
+    
+
+    
+
+       
 
         <hr>
 
-       <form name="form1"  id="form1" method="post" action="/trabalho_web_semestral_eclipse/Produto_srv">
-       
-        Nome produto:<input type="text" name="produto" id="produto"><br><br>
-        Valor produto:<input type="number" name="valor" id="valor">
-        <input type="hidden" name="opcao" id="opcao" value="cadastro">
-        <br><br>
-        <input type="button" name="enviar" id="enviar" value="enviar" onclick="msg()">
-        
-    </form>
-   
-        
+      
+
+        <hr>
+
+        <!-- Pagination -->
+        <!-- <div class="row text-center">
+            <div class="col-lg-12">
+                <ul class="pagination">
+                    <li>
+                        <a href="#">&laquo;</a>
+                    </li>
+                    <li class="active">
+                        <a href="#">1</a>
+                    </li>
+                    <li>
+                        <a href="#">2</a>
+                    </li>
+                    <li>
+                        <a href="#">3</a>
+                    </li>
+                    <li>
+                        <a href="#">4</a>
+                    </li>
+                    <li>
+                        <a href="#">5</a>
+                    </li>
+                    <li>
+                        <a href="#">&raquo;</a>
+                    </li>
+                </ul>
+            </div>
+        </div> -->
+        <!-- /.row -->
+
+        <hr>
+
         <!-- Footer -->
         <footer>
             <div class="row">
