@@ -16,6 +16,23 @@
 		HttpSession sessao = request.getSession();
 		List<String> lstNomes = (List<String>) sessao.getAttribute("lstNomes");
 		List<String> lstPrecos = (List<String>) sessao.getAttribute("lstPrecos");
+		
+		int c = 0;
+		for (String s : lstNomes) {
+			c++;
+		}
+		
+		String[][] bidi = new String[c][2];
+		int cont1 = 0;
+		for(String l: lstNomes) {
+			bidi[cont1][0] = l;
+			cont1++;
+		}
+		int cont2 = 0;
+		for(String col: lstPrecos) {
+			bidi[cont2][1] = col;
+			cont2++;
+		}
 	%>
 	<h1>Estes são os itens que estão no seu carrinho</h1>
 	<br>
@@ -24,18 +41,14 @@
 	<table>
 		<tr>
 			<th>Produto</th>
-		</tr>
-		<%for(String nome: lstNomes){ %>
-		<tr><td><%=nome %></td></tr>
-		<%} %>
-		
-	</table>
-	<table>
-		<tr>
 			<th>Preço</th>
 		</tr>
-		<%for(String preco: lstPrecos){ %>
-		<tr><td><%=preco %></td></tr>
+		<%for(int i=0; i < bidi.length; i++) {%>
+			<tr>
+			<%for (int j = 0; j < bidi[i].length; j++) {%>
+				<td><%=bidi[i][j] %></td>
+			<%}%>
+			</tr>
 		<%} %>
 		
 	</table>
