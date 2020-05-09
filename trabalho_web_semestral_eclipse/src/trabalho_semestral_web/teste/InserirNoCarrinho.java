@@ -39,10 +39,10 @@ public class InserirNoCarrinho extends HttpServlet {
 
 		if(sessao.getAttribute("lstNomes") == null) {
 			List<String> lstNomes = new ArrayList<>();
-			List<Double> lstPrecos = new ArrayList<>();
+			List<String> lstPrecos = new ArrayList<>();
 
 			String nome = request.getParameter("nome");
-			Double preco = Double.parseDouble(request.getParameter("preco"));
+			String preco = request.getParameter("preco");
 			lstNomes.add(nome);
 			lstPrecos.add(preco);
 
@@ -52,10 +52,10 @@ public class InserirNoCarrinho extends HttpServlet {
 			out.println("<h1>Produto adicionado ao carrinho!<h1><br><br>");
 		}else {
 			List<String> lstNomes = (List<String>) sessao.getAttribute("lstNomes");
-			List<Double> lstPrecos = (List<Double>) sessao.getAttribute("lstPrecos");
+			List<String> lstPrecos = (List<String>) sessao.getAttribute("lstPrecos");
 
 			String nome = request.getParameter("nome");
-			Double preco = Double.parseDouble(request.getParameter("preco"));
+			String preco = request.getParameter("preco");
 			lstNomes.add(nome);
 			lstPrecos.add(preco);
 
