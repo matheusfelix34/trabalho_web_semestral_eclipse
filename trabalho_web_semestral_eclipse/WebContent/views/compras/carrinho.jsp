@@ -33,6 +33,7 @@
 			bidi[cont2][1] = col;
 			cont2++;
 		}
+		int cont3 = 0;
 	%>
 	<h1>Estes são os itens que estão no seu carrinho</h1>
 	<br>
