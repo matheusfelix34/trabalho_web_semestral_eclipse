@@ -16,7 +16,7 @@
 		HttpSession sessao = request.getSession();
 		List<String> lstNomes = (List<String>) sessao.getAttribute("lstNomes");
 		List<String> lstPrecos = (List<String>) sessao.getAttribute("lstPrecos");
-		
+		if(lstNomes != null){
 		int c = 0;
 		for (String s : lstNomes) {
 			c++;
@@ -33,7 +33,6 @@
 			bidi[cont2][1] = col;
 			cont2++;
 		}
-		int cont3 = 0;
 	%>
 	<h1>Estes são os itens que estão no seu carrinho</h1>
 	<br>
@@ -56,7 +55,7 @@
 	<br>
 	<br>
 	<br>
-	<form action="">
+	<form action="compraEfetuada.jsp">
 		<div class="form-row text-center">
 			<div class="col-12">
 				<input type="submit" value="Confirmar compra"
@@ -64,5 +63,10 @@
 			</div>
 		</div>
 	</form>
+	<%}else{ %>
+	<h1>Carrinho vazio!</h1>
+	<br><br><br>
+	<span><a href='javascript:history.back()'>[Voltar ao index]</a></span>
+	<%} %>
 </body>
 </html>

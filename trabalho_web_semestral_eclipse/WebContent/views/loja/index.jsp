@@ -30,7 +30,7 @@
 						class="icon-bar"></span> <span class="icon-bar"></span> <span
 						class="icon-bar"></span>
 				</button>
-				<a class="navbar-brand" href="index.html">Loja Virtual</a>
+				<a class="navbar-brand" href="index.jsp">Loja Virtual</a>
 			</div>
 			<!-- Collect the nav links, forms, and other content for toggling -->
 			<div class="collapse navbar-collapse"
@@ -42,17 +42,17 @@
 							class="caret"></b></a>
 						<ul class="dropdown-menu">
 							<li class="active"><a
-								href="../produtos/cadastro_produto.html">Cadastrar produto</a></li>
-							<li><a href="../produtos/consulta_produto.html">Excluir
+								href="../produtos/cadastro_produto.jsp">Cadastrar produto</a></li>
+							<li><a href="../produtos/consulta_produto.jsp">Excluir
 									ou alterar produto</a></li>
 						</ul></li>
 					<li class="dropdown active"><a href="#"
 						class="dropdown-toggle" data-toggle="dropdown">Suas Compras <b
 							class="caret"></b></a>
 						<ul class="dropdown-menu">
-							<li class="active"><a href="../compras/carrinho.html">Carrinho
+							<li class="active"><a href="../compras/carrinho.jsp">Carrinho
 									de compras</a></li>
-							<li><a href="../clientes/historico_do_pedido.html">Historico
+							<li><a href="../clientes/historico_do_pedido.jsp">Historico
 									de pedidos</a></li>
 						</ul></li>
 					<li class="dropdown active"><a href="#"
@@ -70,18 +70,18 @@
 							class="caret"></b></a>
 						<ul class="dropdown-menu">
 							<li class="active"><a
-								href="../relatorios/consulta_cliente_relatorio.html">Pedidos
+								href="../relatorios/consulta_cliente_relatorio.jsp">Pedidos
 									por cliente</a></li>
-							<li><a href="../relatorios/relatorio_pedidos_data.html">Pedidos
+							<li><a href="../relatorios/relatorio_pedidos_data.jsp">Pedidos
 									por data</a></li>
 						</ul></li>
 					<li class="dropdown active"><a href="#"
 						class="dropdown-toggle" data-toggle="dropdown">Usuario <b
 							class="caret"></b></a>
 						<ul class="dropdown-menu">
-							<li class="active"><a href="../clientes/alteracao.html">Alterar
+							<li class="active"><a href="../clientes/alteracao.jsp">Alterar
 									conta</a></li>
-							<li class="active"><a href="login.html">Sair</a></li>
+							<li class="active"><a href="login.jsp">Sair</a></li>
 						</ul></li>
 
 
