@@ -16,6 +16,7 @@
    function actExcluir(){
    	 document.getElementById('saveproduct').value="alterado_sucesso";
    	 document.getElementById('formulario').submit();
+   }
     </script>
 </head>
 <body>

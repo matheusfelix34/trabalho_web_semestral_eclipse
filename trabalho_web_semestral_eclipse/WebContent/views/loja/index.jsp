@@ -60,9 +60,9 @@
 							class="caret"></b></a>
 						<ul class="dropdown-menu">
 							<li class="active"><a
-								href="../clientes//cadastro_cliente.html">Cadastrar cliente</a>
+								href="../clientes/cadastro_cliente.jsp">Cadastrar cliente</a>
 							</li>
-							<li><a href="../clientes/historico_do_pedido.html">Consultar
+							<li><a href="../clientes/historico_do_pedido.jsp">Consultar
 									cliente</a></li>
 						</ul></li>
 					<li class="dropdown active"><a href="#"
