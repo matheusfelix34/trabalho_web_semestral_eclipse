@@ -130,7 +130,7 @@ function FormataStringData(data) {
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="../loja/index.html">Loja Virtual</a>
+                <a class="navbar-brand" href="../loja/index.jsp">Loja Virtual</a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -140,10 +140,10 @@ function FormataStringData(data) {
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Produtos <b class="caret"></b></a>
                         <ul class="dropdown-menu">
                             <li class="active">
-                                <a href="../produtos/cadastro_produto.html">Cadastrar produto</a>
+                                <a href="../produtos/cadastro_produto.jsp">Cadastrar produto</a>
                             </li>
                             <li>
-                                <a href="../produtos/consulta_produto.html">Excluir ou alterar produto</a>
+                                <a href="../produtos/consulta_produto.jsp">Excluir ou alterar produto</a>
                             </li>
                         </ul>
                     </li>
@@ -151,10 +151,10 @@ function FormataStringData(data) {
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Suas Compras <b class="caret"></b></a>
                         <ul class="dropdown-menu">
                             <li class="active">
-                                <a href="../compras/carrinho.html">Carrinho de compras</a>
+                                <a href="../compras/carrinho.jsp">Carrinho de compras</a>
                             </li>
                             <li>
-                                <a href="../clientes/historico_do_pedido.html">Historico de pedidos</a>
+                                <a href="../clientes/historico_do_pedido.jsp">Historico de pedidos</a>
                             </li>
                         </ul>
                     </li>
@@ -162,10 +162,10 @@ function FormataStringData(data) {
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Cliente <b class="caret"></b></a>
                         <ul class="dropdown-menu">
                             <li class="active">
-                                <a href="../clientes/cadastro_cliente.html">Cadastrar cliente</a>
+                                <a href="../clientes/cadastro_cliente.jsp">Cadastrar cliente</a>
                             </li>
                             <li>
-                                <a href="../clientes/historico_do_pedido.html">Consultar cliente</a>
+                                <a href="../clientes/historico_do_pedido.jsp">Consultar cliente</a>
                             </li>
                         </ul>
                     </li>
@@ -173,10 +173,10 @@ function FormataStringData(data) {
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Relatorios <b class="caret"></b></a>
                         <ul class="dropdown-menu">
                             <li class="active">
-                                <a href="consulta_cliente_relatorio.html">Pedidos por cliente</a>
+                                <a href="consulta_cliente_relatorio.jsp">Pedidos por cliente</a>
                             </li>
                             <li>
-                                <a href="relatorio_pedidos_data.html">Pedidos por data</a>
+                                <a href="relatorio_pedidos_data.jsp">Pedidos por data</a>
                             </li>
                         </ul>
                     </li>
@@ -184,7 +184,7 @@ function FormataStringData(data) {
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Usuario <b class="caret"></b></a>
                         <ul class="dropdown-menu">
                             <li class="active">
-                                <a href="../clientes/alteracao.html">Alterar conta</a>
+                                <a href="../clientes/alteracao.jsp">Alterar conta</a>
                             </li>   
                             <li class="active">
                                 <a href="../loja/login.html">Sair</a>
