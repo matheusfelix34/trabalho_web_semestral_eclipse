@@ -59,9 +59,9 @@ public class InserirNoCarrinho_test extends HttpServlet {
 		sessao.setAttribute("lstPrecos", lstPrecos);
 		
 		
-
-		out.println("<h1>Produto retirado do carrinho!<h1><br><br>");
-		out.println("\"<span><a href='javascript:history.back()'>[Voltar ao index]</a></span>\"");
+		response.sendRedirect("views/compras/carrinho.jsp");
+		/*out.println("<h1>Produto retirado do carrinho!<h1><br><br>");
+		out.println("\"<span><a href='javascript:history.back()'>[Voltar ao index]</a></span>\"");*/
 	}
 
 	/**

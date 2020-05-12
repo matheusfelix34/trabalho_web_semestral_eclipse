@@ -109,7 +109,7 @@
 		</div>
 		
 		
-		<form action="../../InserirNoCarrinho">
+		<form action="/trabalho_web_semestral_eclipse/InserirNoCarrinho">
 			<div class="row">
 				<div class="col-md-7">
 					<a href="#"> <img class="img-responsive img-hover"

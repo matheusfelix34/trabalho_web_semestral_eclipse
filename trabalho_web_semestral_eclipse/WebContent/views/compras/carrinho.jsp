@@ -15,6 +15,14 @@
 <link href="../../css/modern-business.css" rel="stylesheet">
 <link href="../../font-awesome/css/font-awesome.min.css"
 	rel="stylesheet" type="text/css">
+		<style>
+table, th, td {
+  border: 1px solid black;
+}
+</style>
+	
+	
+</head>
 <body>
 
 <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
@@ -118,22 +126,22 @@
 			<th>Produto</th>
 			<th>Preço</th>
 		</tr>
-		<%
-			for (int i = 0; i < bidi.length; i++) {
-		%>
-		<tr>
-			<%
-				for (int j = 0; j < bidi[i].length; j++) {
-			%>
-			<td><%=bidi[i][j]%></td>
-			<%
-				}
-			%>
-		</tr>
-		<%
-			}
-		%>
-
+		<%for(int i=0; i < bidi.length; i++) {%>
+			
+			<tr>
+			<%for (int j = 0; j < bidi[i].length; j++) {%>
+			
+				<td ><%=bidi[i][j] %></td>
+				<form   id="<%=i%>" method="post" action="/trabalho_web_semestral_eclipse/InserirNoCarrinho_test">
+			<input type="hidden" id="produto" name="nome" value="<%=bidi[i][j] %>">
+	            </form>
+			
+			<%}%>
+		<td> <button id="<%=i %>." onClick="reply_click(this.id)">Excluir</button></td>
+			</tr>
+			
+			
+		<%} %>
 	</table>
 	<br>
 	<br>
@@ -146,6 +154,24 @@
 			</div>
 		</div>
 	</form>
+	<script type="text/javascript">
+//document.getElementById("1");
+/*var teste= 	document.getElementById("3").innerHTML;
+	console.log(teste);*/
+	
+	 function reply_click(clicked_id)
+	  {
+	      
+	      var resultado = clicked_id.replace(".", "");
+	      
+	   /*  var teste=document.getElementById("produto").value;
+	     console.log(teste);*/
+	     document.getElementById(resultado).submit();
+
+	  }
+	
+	//document.getElementById('form_consulta').;
+	</script>
 	<%
 		} else {
 	%>

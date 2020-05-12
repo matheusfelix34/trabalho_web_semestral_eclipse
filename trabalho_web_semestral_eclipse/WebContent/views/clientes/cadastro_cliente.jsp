@@ -66,6 +66,13 @@
         <br><br>
     </div>
 </form>
+<button onclick="goBack()">Voltar</button>
+
+<script>
+function goBack() {
+  window.history.back();
+}
+</script>
 
 
 </body>
