@@ -1,10 +1,13 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
-<!DOCTYPE html>
+	pageEncoding="ISO-8859-1"%>
+<html lang="en" class="no-js">
 <html>
 <head>
-<meta charset="ISO-8859-1">
-<title>Insert title here</title>,
+<meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="canonical" href="https://html5-templates.com/" />
+<title>Compra efetuada</title>
 <meta name="description"
 	content="A minimalist Bootstrap theme by StartBootstrap. Contains everything you need to get started building your website. All you have to do is change the text and images.">
 <link href="../../css/bootstrap.min.css" rel="stylesheet">
@@ -13,7 +16,7 @@
 	rel="stylesheet" type="text/css">
 </head>
 <body>
-<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+	<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
 		<div class="container">
 			<!-- Brand and toggle get grouped for better mobile display -->
 			<div class="navbar-header">
@@ -23,7 +26,7 @@
 						class="icon-bar"></span> <span class="icon-bar"></span> <span
 						class="icon-bar"></span>
 				</button>
-				<a class="navbar-brand" href="index.jsp">Loja Virtual</a>
+				<a class="navbar-brand" href="../loja/index.jsp">Loja Virtual</a>
 			</div>
 			<!-- Collect the nav links, forms, and other content for toggling -->
 			<div class="collapse navbar-collapse"
@@ -53,8 +56,7 @@
 							class="caret"></b></a>
 						<ul class="dropdown-menu">
 							<li class="active"><a
-								href="../clientes/cadastro_cliente.jsp">Cadastrar cliente</a>
-							</li>
+								href="../clientes/cadastro_cliente.jsp">Cadastrar cliente</a></li>
 							<li><a href="../clientes/historico_do_pedido.jsp">Consultar
 									cliente</a></li>
 						</ul></li>
@@ -84,11 +86,18 @@
 		</div>
 		<!-- /.container -->
 	</nav>
-	
-	
-	
+
+
+
 	<h1>Compra Efetuada!</h1>
-	<br><br><br>
+	<br>
+	<br>
+	<br>
 	<span><a href='javascript:history.back()'>[Voltar ao index]</a></span>
+
+	<script src="../../js/jquery.js"></script>
+
+	<!-- Bootstrap Core JavaScript -->
+	<script src="../../js/bootstrap.min.js"></script>
 </body>
 </html>
