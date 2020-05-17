@@ -12,8 +12,12 @@
     <link href="../../css/bootstrap.min.css" rel="stylesheet">
     <link href="../../css/modern-business.css" rel="stylesheet">
     <link href="../../font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-
-
+<script>
+   function actExcluir(){
+   	 document.getElementById('saveproduct').value="alterado_sucesso";
+   	 document.getElementById('formulario').submit();
+   }
+    </script>
 </head>
 <body>
 <!-- Navigation -->
@@ -100,7 +104,7 @@
 
 <h1 class="display-3 text-center">Alteração de Cadastro </h1>
 
-<form action="../loja/index.html">
+<form id = "formulario" action="../loja/index.jsp">
     <div class="container border">
         <label for="fname">Nome</label><br>
         <input type="text" id="fname" name="fname" class="form-control" value="nome exemplo"><br>
@@ -121,7 +125,7 @@
 
         <br><br>
         <div class="text-center">
-            <input type="submit" value="Salvar" class="btn btn-success">
+            <input id ="saveproduct" type="submit" value="Salvar" class="btn btn-success">
         </div>
         <br>
     </div>

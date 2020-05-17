@@ -14,11 +14,19 @@
             if(cont.length > 7)
                 alert("Usuário cadastrado!")
         }
+        
+       
+ 
+       function actCadastrar(){
+    	   	 document.getElementById('opcao').value="cadastrado_sucesso";
+    		 document.getElementById('formulario').submit();
+       }
+       
     </script>
 </head>
 <body>
 <h1 class="display-1 text-center">Cadastro de cliente</h1>
-<form action="../loja/login.html" >
+<form id="formulario" method="post" action="/trabalho_semestral_web/BuscarCliente">
     <div class="container border">
         <div class="form-group">
             <label for="fname">Nome: </label>
@@ -49,15 +57,22 @@
             <label for="senha">Senha :</label>
             <input type="password" id="senha" name="password" minlength="8" required class="form-control">
         </div>
-
+  			<input type="hidden" name="opcao" id="opcao" value="">
         <br><br>
         <div class="text-center">
-            <input type="submit" value="Cadastrar" class="btn btn-success" onclick="cadastro()">
+            <input type="submit" value="Cadastrar" class="btn btn-success" onclick="cadastro(); actCadastrar();">
             <input type="reset" value="Reset" class="btn btn-danger">
         </div>
         <br><br>
     </div>
 </form>
+<button onclick="goBack()">Voltar</button>
+
+<script>
+function goBack() {
+  window.history.back();
+}
+</script>
 
 
 </body>

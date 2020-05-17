@@ -1,34 +1,34 @@
-<!doctype html>
-<html lang="en" class="no-js">
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="canonical" href="https://html5-templates.com/" />
-    <title>Cadastro de produtos</title>
-	<meta name="description" content="A minimalist Bootstrap theme by StartBootstrap. Contains everything you need to get started building your website. All you have to do is change the text and images.">
+    <title>Consulta relatorio</title>
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"> -->
     <link href="../../css/bootstrap.min.css" rel="stylesheet">
     <link href="../../css/modern-business.css" rel="stylesheet">
     <link href="../../font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <script type="text/javascript">
-		function msg() {
 
-            var nome = document.getElementById("produto").value;
-            var valor = document.getElementById("valor").value;
-            if(nome != "" && valor != ""){
-                alert("Produto cadastrado com sucesso!");
-            }else{
-                alert("Preencha todos os campos para cadastrar um produto.");
-                
-            }
-
- 	 		
-		}
-</script>
+    <script>
+        function consultar(){
+        	
+        	 var cpf = document.getElementById("cpf").value;
+             
+             if(cpf != ""){
+            	 document.getElementById('form_consulta').submit();
+                 
+             }else{
+                 alert("Preencha  o campo de cpf, para realizar a consulta.");
+                 
+             }
+     
+        }
+       
+    </script>
 </head>
-
 <body>
-
      <!-- Navigation -->
      <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
         <div class="container">
@@ -50,10 +50,10 @@
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Produtos <b class="caret"></b></a>
                         <ul class="dropdown-menu">
                             <li class="active">
-                                <a href="../produtos/cadastro_produto.html">Cadastrar produto</a>
+                                <a href="../produtos/cadastro_produto.jsp">Cadastrar produto</a>
                             </li>
                             <li>
-                                <a href="../produtos/consulta_produto.html">Excluir ou alterar produto</a>
+                                <a href="../produtos/consulta_produto.jsp">Excluir ou alterar produto</a>
                             </li>
                         </ul>
                     </li>
@@ -61,10 +61,10 @@
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Suas Compras <b class="caret"></b></a>
                         <ul class="dropdown-menu">
                             <li class="active">
-                                <a href="../compras/carrinho.html">Carrinho de compras</a>
+                                <a href="../compras/carrinho.jsp">Carrinho de compras</a>
                             </li>
                             <li>
-                                <a href="../clientes/historico_do_pedido.html">Historico de pedidos</a>
+                                <a href="../clientes/historico_do_pedido.jsp">Historico de pedidos</a>
                             </li>
                         </ul>
                     </li>
@@ -72,10 +72,10 @@
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Cliente <b class="caret"></b></a>
                         <ul class="dropdown-menu">
                             <li class="active">
-                                <a href="../clientes/cadastro_cliente.html">Cadastrar cliente</a>
+                                <a href="../clientes/cadastro_cliente.jsp">Cadastrar cliente</a>
                             </li>
                             <li>
-                                <a href="../clientes/historico_do_pedido.html">Consultar cliente</a>
+                                <a href="../clientes/historico_do_pedido.jsp">Consultar cliente</a>
                             </li>
                         </ul>
                     </li>
@@ -83,10 +83,10 @@
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Relatorios <b class="caret"></b></a>
                         <ul class="dropdown-menu">
                             <li class="active">
-                                <a href="../relatorios/consulta_cliente_relatorio.html">Pedidos por cliente</a>
+                                <a href="consulta_cliente_relatorio.jsp">Pedidos por cliente</a>
                             </li>
                             <li>
-                                <a href="../relatorios/relatorio_pedidos_data.html">Pedidos por data</a>
+                                <a href="relatorio_pedidos_data.jsp">Pedidos por data</a>
                             </li>
                         </ul>
                     </li>
@@ -94,11 +94,11 @@
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Usuario <b class="caret"></b></a>
                         <ul class="dropdown-menu">
                             <li class="active">
-                                <a href="../clientes/alteracao.html">Alterar conta</a>
-                            </li>
+                                <a href="../clientes/alteracao.jsp">Alterar conta</a>
+                            </li> 
                             <li class="active">
-                                <a href="../loja/login.html">Sair</a>
-                            </li>                           
+                                <a href="../loja/login.jsp">Sair</a>
+                            </li>                          
                         </ul>
                     </li>
                     
@@ -109,40 +109,25 @@
         </div>
         <!-- /.container -->
     </nav>
+    <h1 class="display-3 text-center">Consulta de cliente para relatorio de pedidos:</h1>
+    <p>
 
-    <!-- Page Content -->
-    <div class="container">
-
-        <hr>
-
-       <form>
-        Nome produto:<input type="text" name="produto" id="produto"><br><br>
-        Valor produto:<input type="number" name="valor" id="valor">
-        <br><br>
-        <input type="submit" name="enviar" id="enviar" onclick="msg()">
-    </form>
-   
-        
-        <!-- Footer -->
-        <footer>
-            <div class="row">
-                <div class="col-lg-12">
-                    <p>Copyright &copy; Loja  Virtual, 2020</p>
-                </div>
+    <form name="form1" id="form_consulta" method="post" action="/trabalho_web_semestral_eclipse/Relatorio_srv"">
+        <div class="container border">
+            <div class="form-group">
+                <label for="cpf">CPF: </label>
+                <input type="text" name="cpf" id="cpf" class="form-control" required>
             </div>
-        </footer>
-
-    </div>
-    <!-- /.container -->
-
-    <!-- jQuery -->
+                <div class="text-center">
+                 <input type="submit" name="enviar" id="enviar">
+                
+            </div>
+            <br>
+        </div>
+    </form>
     <script src="../../js/jquery.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
     <script src="../../js/bootstrap.min.js"></script>
-
-
 </body>
-
-
 </html>
