@@ -12,14 +12,14 @@
 <form action="index.jsp" class="form-group col-md-6 offset-md-3 border">
 	<div class="form-group">
 	<br>
-		<p>Login: <input type="text" class="form-control"></p>
+		<p>Login: <input type="text" class="form-control" required></p>
 	</div>
 	<div class="form-group">
-		<p>Senha: <input type="password" class="form-control"></p>
+		<p>Senha: <input type="password" class="form-control" required></p>
 	</div>
 	<div class="form-row text-center">
 	<div class="col-12">
-		<input type="submit" value="Entrar" class="btn btn-success" align="center">
+		<input required type="submit" value="Entrar" class="btn btn-success" align="center">
 	</div>
 	</div>
 	<br>

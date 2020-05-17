@@ -1,6 +1,7 @@
 package trabalho_semestral_web.teste;
 
 import java.io.IOException;
+import java.io.PrintWriter;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -30,6 +31,9 @@ public class Produto_srv extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		//response.getWriter().append("Served at: ").append(request.getContextPath());
+		PrintWriter out;
+		response.setContentType("text/html;charset=UTF-8");
+		out = response.getWriter();
 		String opcao =request.getParameter("opcao");
 		
 		if(opcao.equals("cadastro")){
@@ -52,6 +56,14 @@ public class Produto_srv extends HttpServlet {
 			response.sendRedirect("views/produtos/exclusao_sucedida.jsp");
         }
 		
+		
+if(opcao.equals("cadastrado_sucesso")) {
+	       
+			out.println("<h1>Cadstro realizado com sucesso<h1><br><br>");
+			out.println("\"<span><a href='javascript:history.back()'>[Voltar]</a></span>\"");
+		
+
+		}
 		
 		
 		
