@@ -132,7 +132,7 @@ table, th, td {
 			<%for (int j = 0; j < bidi[i].length; j++) {%>
 			
 				<td ><%=bidi[i][j] %></td>
-				<form   id="<%=i%>" method="post" action="/trabalho_web_semestral_eclipse/InserirNoCarrinho_test">
+				<form   id="<%=i%>" method="post" action="../../InserirNoCarrinho_test">
 			<input type="hidden" id="produto" name="nome" value="<%=bidi[i][j] %>">
 	            </form>
 			
