@@ -30,7 +30,7 @@
     <div class="container border">
         <div class="form-group">
             <label for="fname">Nome: </label>
-            <input type="text" id="fname" name="fname" class="form-control" required><br>
+            <input type="text" id="fname" name="nome" class="form-control" required><br>
         </div>
         <div class="form-group">
             <label for="cpf">Cpf: </label>
@@ -42,17 +42,13 @@
         </div>
         <div class="form-group">
             <label for="dt">Data de Nascimento: </label>
-            <input type="date" id="dt" name="dt" class="form-control"><br>
+            <input type="date" id="dt" name="dataNascimento" class="form-control"><br>
         </div>
         <div class="form-group">
             <label for="ender">Endereço</label>
-            <input type="text" id="ender" name="ender" class="form-control"><br>
+            <input type="text" id="ender" name="endereco" class="form-control"><br>
         </div>
-        <div class="form-group">
-            <label for="sex">Sexo:</label>
-            <input type="radio" name="sex" value="masculino"> Masculino
-            <input type="radio" name="sex" value="feminino"> Feminino
-        </div>
+ 
         <div class="form-group">
             <label for="senha">Senha :</label>
             <input type="password" id="senha" name="password" minlength="8" required class="form-control">
