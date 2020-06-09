@@ -13,6 +13,7 @@ import java.util.ArrayList;
  * Servlet implementation class Produto_srv
  */
 @WebServlet("/Produto_srv")
+//@WebServlet(urlPatterns={"Produto_srv" })
 public class Produto_srv extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        

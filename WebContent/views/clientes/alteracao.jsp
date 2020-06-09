@@ -104,7 +104,7 @@
 
 <h1 class="display-3 text-center">Alteração de Cadastro </h1>
 
-<form id = "formulario" action="../loja/index.jsp">
+<form id = "formulario" method="post" action="../loja/index.jsp">
     <div class="container border">
         <label for="fname">Nome</label><br>
         <input type="text" id="fname" name="fname" class="form-control" value="nome exemplo"><br>

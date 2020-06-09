@@ -26,7 +26,7 @@
 </head>
 <body>
 <h1 class="display-1 text-center">Cadastro de cliente</h1>
-<form id="formulario" method="post" action="/trabalho_semestral_web/BuscarCliente">
+<form id="formulario" method="post" action="/trabalho_web_semestral_eclipse/BuscarCliente">
     <div class="container border">
         <div class="form-group">
             <label for="fname">Nome: </label>
@@ -60,7 +60,7 @@
   			<input type="hidden" name="opcao" id="opcao" value="">
         <br><br>
         <div class="text-center">
-            <input type="submit" value="Cadastrar" class="btn btn-success" onclick="cadastro(); actCadastrar();">
+            <input type="submit" value="Cadastrar" class="btn btn-success">
             <input type="reset" value="Reset" class="btn btn-danger">
         </div>
         <br><br>

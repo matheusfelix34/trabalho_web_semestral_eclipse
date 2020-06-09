@@ -112,7 +112,7 @@
     <h1 class="display-3 text-center">Consulta de cliente para relatorio de pedidos:</h1>
     <p>
 
-    <form name="form1" id="form_consulta" method="post" action="/trabalho_web_semestral_eclipse/Relatorio_srv"">
+    <form name="form1" id="form_consulta" method="post" action="../../Relatorio_srv">
         <div class="container border">
             <div class="form-group">
                 <label for="cpf">CPF: </label>

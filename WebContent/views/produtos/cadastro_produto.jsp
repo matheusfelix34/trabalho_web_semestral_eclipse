@@ -18,6 +18,7 @@
             var nome = document.getElementById("produto").value;
             var valor = document.getElementById("valor").value;
             if(nome != "" && valor != ""){
+            	//alert();
             	document.getElementById('form1').submit();
                 
             }else{
@@ -124,8 +125,8 @@
         Valor produto:<input type="number" name="valor" id="valor">
         <input type="hidden" name="opcao" id="opcao" value="cadastro">
         <br><br>
-        <input type="button" name="enviar" id="enviar" value="enviar" onclick="msg()">
-        
+        <!-- <input type="button" name="enviar" id="enviar" value="enviar" onclick="msg()"> -->
+         <input type="submit" name="enviar" id="enviar" value="enviar" >
     </form>
    
         
