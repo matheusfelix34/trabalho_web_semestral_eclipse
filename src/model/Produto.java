@@ -1,28 +1,20 @@
 package model;
 
 public class Produto {
-	private int id;
 	private String nome;
 	private int quantidade;
 	private double preco;
-	
+
+
+	public Produto(String nome, double preco) {
+		this.nome = nome;
+		this.preco = preco;
+	}
 	
 	public Produto(int id, String nome, int quantidade, double preco) {
-		super();
-		this.id = id;
 		this.nome = nome;
 		this.quantidade = quantidade;
 		this.preco = preco;
-	}
-
-
-	public int getId() {
-		return id;
-	}
-
-
-	public void setId(int id) {
-		this.id = id;
 	}
 
 
