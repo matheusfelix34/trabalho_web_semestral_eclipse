@@ -1,28 +1,28 @@
 package model;
 
 public class Produto {
-	
-	private int codigo;
+	private int id;
 	private String nome;
-	private double valor;
 	private int quantidade;
+	private double preco;
 	
 	
-	public Produto(String nome, double valor, int quantidade) {
+	public Produto(int id, String nome, int quantidade, double preco) {
 		super();
+		this.id = id;
 		this.nome = nome;
-		this.valor = valor;
 		this.quantidade = quantidade;
+		this.preco = preco;
 	}
 
 
-	public int getCodigo() {
-		return codigo;
+	public int getId() {
+		return id;
 	}
 
 
-	public void setCodigo(int codigo) {
-		this.codigo = codigo;
+	public void setId(int id) {
+		this.id = id;
 	}
 
 
@@ -36,16 +36,6 @@ public class Produto {
 	}
 
 
-	public double getValor() {
-		return valor;
-	}
-
-
-	public void setValor(double valor) {
-		this.valor = valor;
-	}
-
-
 	public int getQuantidade() {
 		return quantidade;
 	}
@@ -53,5 +43,15 @@ public class Produto {
 
 	public void setQuantidade(int quantidade) {
 		this.quantidade = quantidade;
+	}
+
+
+	public double getPreco() {
+		return preco;
+	}
+
+
+	public void setPreco(double preco) {
+		this.preco = preco;
 	}
 }
