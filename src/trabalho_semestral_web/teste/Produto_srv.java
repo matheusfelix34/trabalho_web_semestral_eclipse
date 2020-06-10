@@ -13,7 +13,7 @@ import java.util.ArrayList;
  * Servlet implementation class Produto_srv
  */
 @WebServlet("/Produto_srv")
-//@WebServlet(urlPatterns={"Produto_srv" })
+
 public class Produto_srv extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
@@ -31,7 +31,7 @@ public class Produto_srv extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		//response.getWriter().append("Served at: ").append(request.getContextPath());
-		String opcao =request.getParameter("opcao");
+		/*String opcao =request.getParameter("opcao");
 		
 		if(opcao.equals("cadastro")){
 			ArrayList<String> bandas = new ArrayList<String> ();
@@ -52,7 +52,7 @@ public class Produto_srv extends HttpServlet {
 		if(opcao.equals("excluisao_sucesso")){
 			response.sendRedirect("views/produtos/exclusao_sucedida.jsp");
         }
-		
+		*/
 		
 		
 		

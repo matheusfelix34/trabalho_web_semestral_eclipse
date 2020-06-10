@@ -144,7 +144,7 @@
 					<h4>kit com 4 livros</h4>
 					<input type="submit" class="btn btn-primary"
 						value="Por no carrinho">
-				</div>
+			 	</div>
 			</div>
 		</form>
 

@@ -47,18 +47,24 @@ public class RemoverDoCarrinho extends HttpServlet {
 
 		List<Produto> produtos = (List<Produto>) sessao.getAttribute("lstProdutos");
 
-		
+		int i = -1;
 		String nome = request.getParameter("nome");
 		Double preco = Double.parseDouble(request.getParameter("preco"));
-		Produto p = new Produto(nome, preco);
-		int postion = produtos.indexOf(p);
-		produtos.remove(postion);
-		
+		try {
+			for(Produto prod : produtos) {
+				if(prod.getNome().equals(nome) && prod.getPreco() == preco) {
+					i = produtos.indexOf(prod);
+					produtos.remove(i);
+				}
+			}
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
 
 		sessao.setAttribute("lstProdutos", produtos);
 
 
-		response.sendRedirect("views/compras/carrinho2.jsp");
+		response.sendRedirect("views/compras/carrinho.jsp");
 	}
 
 }
