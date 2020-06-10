@@ -109,7 +109,7 @@
 		</div>
 		
 		
-		<form action="../../InserirNoCarrinho">
+		<form action="../../InserirProdutoNoCarrinho">
 			<div class="row">
 				<div class="col-md-7">
 					<a href="#"> <img class="img-responsive img-hover"
@@ -129,7 +129,7 @@
 			</div>
 		</form>
 
-		<form action="../../InserirNoCarrinho">
+		<form action="../../InserirProdutoNoCarrinho">
 			<div class="row">
 				<div class="col-md-7">
 					<a href="#"> <img class="img-responsive img-hover"
@@ -148,7 +148,7 @@
 			</div>
 		</form>
 
-		<form action="../../InserirNoCarrinho">
+		<form action="../../InserirProdutoNoCarrinho">
 			<div class="row">
 				<div class="col-md-7">
 					<a href="#"> <img class="img-responsive img-hover"
@@ -167,7 +167,7 @@
 			</div>
 		</form>
 
-		<form action="../../InserirNoCarrinho">
+		<form action="../../InserirProdutoNoCarrinho">
 			<div class="row">
 				<div class="col-md-7">
 					<a href="#"> <img class="img-responsive img-hover"
@@ -186,7 +186,7 @@
 			</div>
 		</form>
 
-		<form>
+		<form  action="../../InserirProdutoNoCarrinho">
 			<div class="row">
 
 				<div class="col-md-7">

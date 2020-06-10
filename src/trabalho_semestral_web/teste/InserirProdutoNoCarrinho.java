@@ -2,8 +2,8 @@ package trabalho_semestral_web.teste;
 
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.ArrayList;
+import java.util.List;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -33,32 +33,36 @@ public class InserirProdutoNoCarrinho extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		String nome = request.getParameter("nome");
-		double preco = Double.parseDouble(request.getParameter("preco"));
-		
-		Produto p = new Produto(nome, preco);
-		
 		HttpSession sessao = request.getSession();
+
 		PrintWriter out;
 		response.setContentType("text/html;charset=UTF-8");
 		out = response.getWriter();
 		
+		String nome = request.getParameter("nome");
+		Double preco = Double.parseDouble(request.getParameter("preco"));
+		Produto p = new Produto(nome, preco);
+
 		if(sessao.getAttribute("lstProdutos") == null) {
-			Map<String, Produto> produtos = new HashMap<>();
-			produtos.put(nome, p);
-			
+			List<Produto> produtos = new ArrayList<>();
+			produtos.add(p);
+
 			sessao.setAttribute("lstProdutos", produtos);
+
 			out.println("<h1>Produto adicionado ao carrinho!<h1><br><br>");
 		}else {
-			Map<String, Produto> produtos = (Map<String, Produto>) sessao.getAttribute("lstProdutos");
-			produtos.put(nome, p);
+			List<Produto> produtos = (List<Produto>) sessao.getAttribute("lstProdutos");
 			
+			produtos.add(p);
+
 			sessao.setAttribute("lstProdutos", produtos);
+
+
 			out.println("<h1>Produto adicionado ao carrinho!<h1><br><br>");
+
 		}
-		
+
 		out.println("\"<span><a href='javascript:history.back()'>[Voltar ao index]</a></span>\"");
-		
 	}
 
 	/**
