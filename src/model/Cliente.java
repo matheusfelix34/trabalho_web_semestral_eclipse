@@ -11,15 +11,13 @@ public class Cliente {
 	private String senha;
 		
 	
-	public Cliente(String nome, String cpf, String rg, String dataNascimento, String endereço, String sexo,
-			String senha) {
+	public Cliente(String nome, String cpf, String rg, String dataNascimento, String endereço,String senha) {
 		super();
 		this.nome = nome;
 		this.cpf = cpf;
 		this.rg = rg;
 		this.dataNascimento = dataNascimento;
-		this.endereço = endereço;
-		
+		this.endereço = endereço;		
 		this.senha = senha;
 	}
 	
