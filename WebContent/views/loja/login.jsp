@@ -23,6 +23,7 @@
 	<div class="form-row text-center">
 	<div class="col-12">
 		<input type="submit" value="Entrar" class="btn btn-success" align="center">
+		<button class="btn btn-success" a>Cadastrar-se</button>
 	</div>
 	</div>
 	<br>
