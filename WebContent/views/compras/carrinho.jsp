@@ -115,9 +115,10 @@ table, th, td {
 			<td><%=p.getNome() %></td>
 			<td><%=p.getPreco() %></td>
 			<form method="post" action="../../RemoverDoCarrinho">
-			<input type="hidden" id="produto" name="nome" value="<%=p.getNome() %>">
-			<input type="hidden" id="preco" name="preco" value="<%=p.getPreco() %>">
-			<td><input type="submit" value="Excluir"></td>
+				<input type="hidden" id="produto" name="nome" value="<%=p.getNome() %>">
+				<input type="hidden" id="preco" name="preco" value="<%=p.getPreco() %>">
+				<td><input type="submit" value="Excluir"></td>
+			</form>
 			</tr>
 		<%}; %>
 	</table>
