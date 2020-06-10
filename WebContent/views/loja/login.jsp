@@ -12,7 +12,7 @@
 
 
 
- <form name="login"  id="formlogin" method="post" action="/trabalho_web_semestral_eclipse/LoginSessao1" class="form-group col-md-6 offset-md-3 border">
+ <form name="login"  id="formlogin" method="post" action="../../LoginSessao1" class="form-group col-md-6 offset-md-3 border">
 	<div class="form-group">
 	<br>
 		<p>Login: <input type="text" name="user" id="user" class="form-control"></p>
