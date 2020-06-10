@@ -1,11 +1,14 @@
 package trabalho_semestral_web.teste;
 
 import java.io.IOException;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 /**
  * Servlet implementation class LoginSessao1
@@ -27,7 +30,32 @@ public class LoginSessao1 extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		response.getWriter().append("Served at: ").append(request.getContextPath());
+		
+		String user = "";
+		String senha = "";
+		
+		
+		if(request.getParameter("user") != null && !request.getParameter("user").equals("")) {
+			user = request.getParameter("user");
+		}
+		
+		if(request.getParameter("senha") != null && !request.getParameter("senha").equals("")) {
+			senha = request.getParameter("senha");
+		}
+		
+
+		HttpSession sess = request.getSession();
+		sess.setAttribute("atributoNome", user);
+		sess.setAttribute("atributoEmail", senha);
+		
+		
+
+		Cookie cookAux = new Cookie("cookieNome", user);
+		cookAux.setMaxAge(60 * 60 * 24 * 2);
+		response.addCookie(cookAux);
+		
+		
+		response.sendRedirect("views/loja/index.jsp");
 	}
 
 	/**

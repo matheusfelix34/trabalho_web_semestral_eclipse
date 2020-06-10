@@ -9,13 +9,16 @@
 </head>
 <body>
 <br><br><br>
-<form action="index.jsp" class="form-group col-md-6 offset-md-3 border">
+
+
+
+ <form name="login"  id="formlogin" method="post" action="/trabalho_web_semestral_eclipse/LoginSessao1" class="form-group col-md-6 offset-md-3 border">
 	<div class="form-group">
 	<br>
-		<p>Login: <input type="text" class="form-control"></p>
+		<p>Login: <input type="text" name="user" id="user" class="form-control"></p>
 	</div>
 	<div class="form-group">
-		<p>Senha: <input type="password" class="form-control"></p>
+		<p>Senha: <input type="password" name="senha" id="senha" class="form-control"></p>
 	</div>
 	<div class="form-row text-center">
 	<div class="col-12">
