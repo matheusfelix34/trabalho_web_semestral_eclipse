@@ -39,6 +39,7 @@ public class Cadastrar_cliente extends HttpServlet {
 		 String dataNascimento="";
 		 String endereço="";
 		 String senha="";
+		 //teste
 		
 		 if(request.getParameter("nome") != null && !request.getParameter("nome").equals("")) {
 				nome = request.getParameter("nome");
