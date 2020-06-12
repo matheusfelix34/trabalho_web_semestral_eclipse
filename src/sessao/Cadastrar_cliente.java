@@ -74,17 +74,17 @@ public class Cadastrar_cliente extends HttpServlet {
 		 
 		
 			//Preencher o model com os valores recebidos
-			/*Cliente exModel = new Cliente(nome,cpf,rg,dataNascimento,endereço,senha);
+			Cliente exModel = new Cliente(nome,cpf,rg,dataNascimento,endereço,senha);
 			 
-				adicionarSessao(exModel, request);*/
+				adicionarSessao(exModel, request);
 				 //response.sendRedirect("views/clientes/Cookie_adicionado.jsp");
 			
 			 
 				//ExemploSessaoModel exModel = new ExemploSessaoModel(nome, email);
 				//response.sendRedirect("/ExemploAulaSessao/Resposta.jsp");
 				
-				/* RequestDispatcher reqDispatcher = request.getRequestDispatcher("views/clientes/Resposta2.jsp");
-				reqDispatcher.forward(request, response); */
+				 RequestDispatcher reqDispatcher = request.getRequestDispatcher("views/clientes/cadastro_sucedido.jsp");
+				reqDispatcher.forward(request, response); 
 				
 				
 			//response.getWriter().append("Served at: ").append(request.getContextPath());

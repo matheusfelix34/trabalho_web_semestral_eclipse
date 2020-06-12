@@ -1,3 +1,4 @@
+<%@page import="model.Cliente"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
          pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
@@ -106,23 +107,55 @@
 
 <form id = "formulario" method="post" action="../loja/index.jsp">
     <div class="container border">
-        <label for="fname">Nome</label><br>
-        <input type="text" id="fname" name="fname" class="form-control" value="nome exemplo"><br>
-        <label for="cpf">Cpf</label><br>
-        <input type="text" id="cpf" value="01.23.45.67-89" name="cpf" maxlength="14" disabled readonly class="form-control"> class="form-control"<br>
-        <label for="rg">Rg</label><br>
+        
+        <%
+		 HttpSession sessaoRecuperada = request.getSession();
+	
+	Cliente model = (Cliente)sessaoRecuperada.getAttribute("atributoCliente");
+        		
+		 
+		
+	%>  
+	
+	 <% if(model==null){ %>
+			 
+			  <label for="fname">Nome</label><br>
+			  <input type="text" id="fname" name="fname" class="form-control" value="Nome_exemplo"><br> 
+			 
+    	   	  <label for="cpf">Cpf</label><br>
+        	  <input type="text" id="cpf" value="01.23.45.67-89" name="cpf" maxlength="14" disabled readonly class="form-control"> class="form-control"<br>
+        	   <label for="rg">Rg</label><br>
         <input type="text" id="rg" name="rg" value="01.23.45.67-89" disabled readonly class="form-control"><br>
         <label for="dt">Data de Nascimento</label><br>
         <input type="text" id="dt" name="dt" value="01/01/2001" disabled readonly class="form-control"><br>
         <label for="ender">Endereço</label><br>
         <input type="text" id="ender" name="ender" value="rua a, n 10"disabled class="form-control"><br>
-        <label for="sex">Sexo:</label>
-        <input type="radio" name="sex" value="masculino" disabled> Masculino
-        <input type="radio" name="sex" value="feminino" disabled> Feminino
-        <br><br>
+          
         <label for="senha">Nova Senha :</label>
-        <input type="password" id="senha" name="password" minlength="8" required class="form-control">
-
+        <input type="password" id="senha" name="password" value="asdasdsadasd" minlength="8" required class="form-control">
+        
+     
+        
+        
+			 
+	<%}else{%>
+	  <label for="fname">Nome</label><br>
+			  <input type="text" id="fname" name="fname" class="form-control" value="<%=model.getNome()%>"><br>
+			  
+        <label for="cpf">Cpf</label><br>
+        <input type="text" id="cpf" value="<%=model.getCpf()%>" name="cpf" maxlength="14" disabled readonly class="form-control"> class="form-control"<br>
+        
+         <label for="rg">Rg</label><br>
+        <input type="text" id="rg" name="rg" value="<%=model.getRg()%>" disabled readonly class="form-control"><br>
+        <label for="dt">Data de Nascimento</label><br>
+        <input type="text" id="dt" name="dt" value="<%=model.getDataNascimento()%>" disabled readonly class="form-control"><br>
+        <label for="ender">Endereço</label><br>
+        <input type="text" id="ender" name="ender" value="<%=model.getEndereço()%>"disabled class="form-control"><br>
+		<%}%>
+	
+     <label for="senha">Nova Senha :</label>
+        <input type="password" id="senha" name="password" value="asdasdsadasd" minlength="8" required class="form-control">
+      
         <br><br>
         <div class="text-center">
             <input id ="saveproduct" type="submit" value="Salvar" class="btn btn-success">

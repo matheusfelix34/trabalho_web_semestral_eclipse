@@ -122,7 +122,7 @@
 					<h2>Sandy e Junio uma aventura virtual</h2>
 					<input type="hidden" value="Sandy e Junio uma aventura virtual"
 						name="nome">
-					<h4>Apenas o melhor jgo feito pelo homem</h4>
+					<h4>Apenas o melhor jogo feito pelo homem</h4>
 					<input type="submit" class="btn btn-primary"
 						value="Por no carrinho">
 				</div>
