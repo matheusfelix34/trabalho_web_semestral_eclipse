@@ -1,4 +1,4 @@
-package trabalho_semestral_web.teste.cliente;
+package trabalho_semestral_web.teste;
 
 import java.io.IOException;
 
@@ -8,14 +8,14 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import model.Cliente;
-
 
 /**
  * Servlet implementation class Cadastrar_cliente
  */
-@WebServlet("/Cadastrar_cliente")
+//@WebServlet("/Cadastrar_cliente")
 
 public class Cadastrar_cliente extends HttpServlet {
 	private static final long serialVersionUID = 1L;
@@ -33,7 +33,7 @@ public class Cadastrar_cliente extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		 String nome ="";
+	     String nome ="";
 		 String cpf= "";
 		 String rg= "";
 		 String dataNascimento="";
@@ -73,20 +73,42 @@ public class Cadastrar_cliente extends HttpServlet {
 		 
 		 
 		 
-		
-			
-		 Cliente exModel = new Cliente(nome,cpf,rg,dataNascimento,endereço,senha);
-		 
+		 response.sendRedirect("/trabalho_web_semestral_eclipse/Cookie_adicionado.jsp");
 		//Preencher o model com os valores recebidos
+		/* Cliente exModel = new Cliente(nome,cpf,rg,dataNascimento,endereço,senha);
+		 
+			adicionarSessao(exModel, request);
+		
 		 
 			//ExemploSessaoModel exModel = new ExemploSessaoModel(nome, email);
-		
-		response.getWriter().append("Served at: ").append(request.getContextPath());
+			//response.sendRedirect("/ExemploAulaSessao/Resposta.jsp");
+			RequestDispatcher reqDispatcher = request.getRequestDispatcher("/Resposta.jsp");
+			reqDispatcher.forward(request, response); */
+		//response.getWriter().append("Served at: ").append(request.getContextPath());
 	}
 
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
+	
+public void adicionarSessao(Cliente modelParametro, HttpServletRequest request ) {
+	
+		
+		//Colocando os atributos na sessão
+		HttpSession exSessao = request.getSession();
+		exSessao.setAttribute("atributoCliente", modelParametro);
+				
+		
+		
+	}
+
+
+
+
+
+
+
+
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		doGet(request, response);

@@ -26,11 +26,11 @@
 </head>
 <body>
 <h1 class="display-1 text-center">Cadastro de cliente</h1>
-<form id="formulario" method="post" action="/trabalho_web_semestral_eclipse/BuscarCliente">
+<form id="formulario" method="post" action="../../Cadastrar_cliente">
     <div class="container border">
         <div class="form-group">
             <label for="fname">Nome: </label>
-            <input type="text" id="fname" name="nome" class="form-control" required><br>
+            <input type="text" id="nome" name="nome" class="form-control" required><br>
         </div>
         <div class="form-group">
             <label for="cpf">Cpf: </label>
@@ -42,16 +42,16 @@
         </div>
         <div class="form-group">
             <label for="dt">Data de Nascimento: </label>
-            <input type="date" id="dt" name="dataNascimento" class="form-control"><br>
+            <input type="date" id="dataNascimento" name="dataNascimento" class="form-control"><br>
         </div>
         <div class="form-group">
             <label for="ender">Endereço</label>
-            <input type="text" id="ender" name="endereco" class="form-control"><br>
+            <input type="text" id="endereco" name="endereco" class="form-control"><br>
         </div>
  
         <div class="form-group">
             <label for="senha">Senha :</label>
-            <input type="password" id="senha" name="password" minlength="8" required class="form-control">
+            <input type="password" id="senha" name="senha" minlength="8" required class="form-control">
         </div>
   			<input type="hidden" name="opcao" id="opcao" value="">
         <br><br>
