@@ -170,7 +170,7 @@
         <div class="container border">
             <div class="form-group">
                 <label for="cpf">CPF: </label>
-                <input type="text" name="cpf" id="cpf" class="form-control" required>
+                <input type="number" name="cpf" id="cpf" class="form-control" required>
             </div>
             <div class="text-center">
                 <input type="radio" name="group1" value="excluir"  > Excluir

@@ -102,7 +102,6 @@
 
     <h1 class="display-4 text-center">Exclusão Realizada com sucecesso</h1>
     <br>
-    <p class="text-center"><a href="../loja/index.html">Voltar ao páina principal</a></p>
 
 
     <!-- Footer -->
@@ -117,11 +116,21 @@
 </div>
 <!-- /.container -->
 
+<button id="myButton" class="float-left submit-button" >Voltar ao páina principal</button>
+
+<script type="text/javascript">
+    document.getElementById("myButton").onclick = function () {
+        location.href = "views/clientes/consulta_altera_exclui.jsp";
+    };
+</script>
 <!-- jQuery -->
 <script src="../../js/jquery.js"></script>
 
 <!-- Bootstrap Core JavaScript -->
 <script src="../../js/bootstrap.min.js"></script>
+<script>
+
+</script>
 
 </body>
 </html>

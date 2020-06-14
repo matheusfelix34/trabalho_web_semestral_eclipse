@@ -30,28 +30,28 @@
     <div class="container border">
         <div class="form-group">
             <label for="fname">Nome: </label>
-            <input type="text" id="nome" name="nome" class="form-control" required><br>
+            <input  required="required" type="text" id="nome" name="nome" class="form-control" required><br>
         </div>
         <div class="form-group">
             <label for="cpf">Cpf: </label>
-            <input type="number" id="cpf" name="cpf" maxlength="14" class="form-control"><br>
+            <input required="required" type="number" id="cpf" name="cpf" maxlength="14" class="form-control"><br>
         </div>
         <div class="form-group">
             <label for="rg">Rg: </label>
-            <input type="number" id="rg" name="rg" maxlength="14" class="form-control"><br>
+            <input required="required" type="number" id="rg" name="rg" maxlength="14" class="form-control"><br>
         </div>
         <div class="form-group">
             <label for="dt">Data de Nascimento: </label>
-            <input type="date" id="dataNascimento" name="dataNascimento" class="form-control"><br>
+            <input required="required" type="date" id="dataNascimento" name="dataNascimento" class="form-control"><br>
         </div>
         <div class="form-group">
             <label for="ender">Endereço</label>
-            <input type="text" id="endereco" name="endereco" class="form-control"><br>
+            <input required="required" type="text" id="endereco" name="endereco" class="form-control"><br>
         </div>
  
         <div class="form-group">
             <label for="senha">Senha :</label>
-            <input type="password" id="senha" name="senha" minlength="8" required class="form-control">
+            <input required="required" type="password" id="senha" name="senha" minlength="8" required class="form-control">
         </div>
   			<input type="hidden" name="opcao" id="opcao" value="">
         <br><br>

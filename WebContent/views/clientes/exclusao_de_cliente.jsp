@@ -1,3 +1,4 @@
+<%@page import="model.Cliente"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
          pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
@@ -13,11 +14,11 @@
     <link href="../../css/modern-business.css" rel="stylesheet">
     <link href="../../font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <script>
-    function actExcluir(){
+   /* function actExcluir(){
    	 document.getElementById('opcao').value="exclusao_sucesso";
  	 document.getElementById('formulario').submit();
 
-   }
+   }*/
    function actDesfazer(){
        document.forms[0].action= "consulta_altera_exclui.jsp"
        document.forms[0].submit()
@@ -105,15 +106,39 @@
     <!-- /.container -->
 </nav>
 <div class="container">
-
-    <h1 class="display-4 text-center">Tem certeza  que deseja excluir o cadastro do usuario?</h1>
+  <%
+		 HttpSession sessaoRecuperada = request.getSession();
+	
+	Cliente model = (Cliente)sessaoRecuperada.getAttribute("atributoCliente");
+        		
+		 
+		
+	%>  
+	
+	
+	
+	
+	
+	<% if(model==null){ %>
+		<h1 class="display-4 text-center">Tem certeza  que deseja excluir o cadastro do usuario Exemplo?</h1>	 
+			 
+	<%}else{%>
+	   
+	 
+	 <h1 class="display-4 text-center">Tem certeza  que deseja excluir o cadastro do usuario <%=model.getNome()%> ?</h1>
+			
+		<%}%>
+	
+	
+	
+  
     <br><br>
-    <form id="formulario" method="post" action="/trabalho_semestral_web/BuscarCliente">
+    <form id="formulario" method="post" action="../../Excluir_cliente">
         <div class="container border text-center">
             <br><br>
-            <input type="button" id="confirmar" value="Excluir" class="btn btn-danger" onclick="actExcluir()">
+            <input type="submit" id="confirmar" value="Excluir" class="btn btn-danger" onclick="actExcluir()">
             <input type="button" id="desfazer" value="Não excluir" class="btn btn-success" onclick="actDesfazer()">
-            <input type="hidden" name="opcao" id="opcao" value="">
+           
             <br><br>
         </div>
     </form>
