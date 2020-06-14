@@ -105,7 +105,7 @@
 
         <hr>
 
-        <form name="form1" method="post" action="/trabalho_web_semestral_eclipse/Produto_srv">
+        <form name="form1" method="post" action="../../Produto_srv">
 			<label for="produto">Novo nome do Produto</label><br>
 			<input type="text" id="produto" name="produto" required><br>
 			<label for="valor">Novo valor do Produto</label><br>

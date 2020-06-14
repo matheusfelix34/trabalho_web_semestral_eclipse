@@ -109,7 +109,7 @@
     <div class="container">
   
         <h1>Tem certeza  que deseja excluir o cadastro do produto?</h1>
-        <form name="form1" id="form_consulta" method="post" action="/trabalho_web_semestral_eclipse/Produto_srv" >
+        <form name="form1" id="form_consulta" method="post" action="../../Produto_srv" >
            
       <br><br>
       <input type="button" id="confirmar" value="Excluir" class="btn btn-danger" onclick="actExcluir()">

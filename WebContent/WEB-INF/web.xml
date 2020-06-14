@@ -9,22 +9,12 @@
     <welcome-file>default.htm</welcome-file>
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
-  
-  
-   <servlet>
-  	<servlet-name>cadastrar_cliente_Servlet</servlet-name>
-  	<servlet-class>sessao.Cadastrar_cliente</servlet-class>
+  <servlet>
+    <servlet-name>cadastrar_cliente_Servlet</servlet-name>
+    <servlet-class>sessao.Cadastrar_cliente</servlet-class>
   </servlet>
-  
   <servlet-mapping>
-  	<servlet-name>cadastrar_cliente_Servlet</servlet-name>
-  	<url-pattern>/Cadastrarcliente</url-pattern>
+    <servlet-name>cadastrar_cliente_Servlet</servlet-name>
+    <url-pattern>/Cadastrarcliente</url-pattern>
   </servlet-mapping>
-  
-  
-  
-  
-  
 </web-app>
-
-
