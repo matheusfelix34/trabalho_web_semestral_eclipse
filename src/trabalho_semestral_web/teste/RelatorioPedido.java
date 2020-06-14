@@ -52,7 +52,7 @@ public class RelatorioPedido extends HttpServlet {
 
 
 
-		response.sendRedirect("views/relatorios/relatpedidos.jsp");
+		response.sendRedirect("views/clientes/cadastro_cliente.jsp");
 
 	}
 
