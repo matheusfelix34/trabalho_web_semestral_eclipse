@@ -20,107 +20,8 @@
 
     <script>
     
+
   
-    
-// function Pesquisar(){
-//     document.getElementById("corpo").innerHTML="";
-//     var d1=document.getElementById('data_incial').value;
-//     var data1=new Date(d1);
-//     var d2=document.getElementById('data_final').value;
-//     var data2=new Date(d2);
-//     if(data1=="Invalid Date" || data2=="Invalid Date" ){
-//         alert('Selecione as duas datas do intervalo,antes de clicar em pesquisar!')
-//     }else{
-
-//         var pedidos = [
-// //	116511651656565165
-//     {
-//         'numeracao': '485511651656565165',
-//         'data': '29/03/2020',
-//     },
-
-//     {
-//         'numeracao': '789511651656565165',
-//         'data': '29/03/2020',
-//     },
-
-//     {
-//         'numeracao': '658511651656565165',
-//         'data': '29/03/2020',
-//     },
-
-//     {
-//         'numeracao': '145511651656565165',
-//         'data': '18/03/2020',
-//     },
-
-//     {
-//         'numeracao': '369511651656565165',
-//         'data': '18/03/2020',
-//     },
-
-//     {
-//         'numeracao': '777511651656565165',
-//         'data': '18/03/2020',
-//     },
-
-//     {
-//         'numeracao': '888511651656565165',
-//         'data': '05/03/2020',
-//     },
-
-//     {
-//         'numeracao': '999511651656565165',
-//         'data': '05/03/2020',
-//     },
-
-//     {
-//         'numeracao': '999511651656565165',
-//         'data': '05/03/2020',
-//     },
-
-    
-
-// ];
-
-// function FormataStringData(data) {
-//   var dia  = data.split("/")[0];
-//   var mes  = data.split("/")[1];
-//   var ano  = data.split("/")[2];
-
-//   return ano + '-' + ("0"+mes).slice(-2) + '-' + ("0"+dia).slice(-2);
-  
-// }
-
-
-
-// // console.log(data1.getTime());
-// // console.log(data.getTime());
-
-
-
-
-
-       
-//         for (var a = 0; a <pedidos.length; a ++) {
-
-//             var data = new Date(FormataStringData(pedidos[a].data));
-//             if( data.getTime() > data1.getTime() & data.getTime() < data2.getTime() ){
-//                 document.getElementById("corpo").innerHTML = '<tr> <th scope="row">'+a+'</th><td>'+pedidos[a].numeracao+'</td><td>'+pedidos[a].data+'</td></tr>';
-    
-//     }
-           
-
-    
-// }
-
-
-//     }
-    
-  
-
-// }
-
     </script>
 
 </head>
@@ -234,11 +135,11 @@
     		Pedido pedid =  (Pedido) sessao.getAttribute("atributoPedido");
     		
 			%>
-            <tbody style="visibility: hidden" id="corpo">
+            <tbody  id="corpo">
               <tr>
 			<td><%=pedid.getId() %></td>
 			<td>12231223</td>
-			<td>123122132</td>
+			<td><%=pedid.getRegistro() %></td>
 			</tr>
 		
             </tbody>
