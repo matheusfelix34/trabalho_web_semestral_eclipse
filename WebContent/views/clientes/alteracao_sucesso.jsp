@@ -9,13 +9,19 @@
     <title>Cadastro de cliente</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <script>
-    function mostrar_radio() {
-    	 document.getElementById('formulario').submit();
+        function cadastro(){
+            var check = document.getElementById("senha")
+            var cont = String(check.value)
+            if(cont.length > 7)
+                alert("Usuário cadastrado!")
         }
         
        
  
-       
+       function actCadastrar(){
+    	   	 document.getElementById('opcao').value="cadastrado_sucesso";
+    		 document.getElementById('formulario').submit();
+       }
        
     </script>
 </head>
@@ -30,8 +36,11 @@
 		
 	%>
 	
-	<%=model.getNome()%> realizado com sucesso!</h1>
+	Alteracao no cadastro do usuario <%=model.getNome()%> realizada com sucesso!</h1>
     <br>
+  <!--   <p class="text-center"><a href="../loja/index.jsp">Ir para página principal</a></p>  -->
+      <!-- <a class="navbar-brand" href="../loja/index.jsp">Loja Virtual</a>  -->
+      
 <button onclick="goBack()">Voltar</button>
 <script>
 function goBack() {

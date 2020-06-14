@@ -1,4 +1,4 @@
-package trabalho_semestral_web.teste;
+package sessao;
 
 import java.io.IOException;
 
@@ -13,17 +13,16 @@ import javax.servlet.http.HttpSession;
 import model.Cliente;
 
 /**
- * Servlet implementation class Cadastrar_cliente
+ * Servlet implementation class Alterar_cliente
  */
-//@WebServlet("/Cadastrar_cliente")
-
-public class Cadastrar_cliente extends HttpServlet {
+@WebServlet("/Alterar_cliente")
+public class Alterar_cliente extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public Cadastrar_cliente() {
+    public Alterar_cliente() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -33,7 +32,7 @@ public class Cadastrar_cliente extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-	     String nome ="";
+		 String nome ="";
 		 String cpf= "";
 		 String rg= "";
 		 String dataNascimento="";
@@ -71,25 +70,25 @@ public class Cadastrar_cliente extends HttpServlet {
 			 endereço = request.getParameter("senha");
 			}
 		 
+		 Cliente exModel = new Cliente(nome,cpf,rg,dataNascimento,endereço,senha);
+		 adicionarSessao(exModel, request);
 		 
 		 
-		 response.sendRedirect("/trabalho_web_semestral_eclipse/Cookie_adicionado.jsp");
-		//Preencher o model com os valores recebidos
-		/* Cliente exModel = new Cliente(nome,cpf,rg,dataNascimento,endereço,senha);
 		 
-			adicionarSessao(exModel, request);
-		
-		 
-			//ExemploSessaoModel exModel = new ExemploSessaoModel(nome, email);
-			//response.sendRedirect("/ExemploAulaSessao/Resposta.jsp");
-			RequestDispatcher reqDispatcher = request.getRequestDispatcher("/Resposta.jsp");
-			reqDispatcher.forward(request, response); */
+		 RequestDispatcher reqDispatcher = request.getRequestDispatcher("views/clientes/alteracao_sucesso.jsp");
+			reqDispatcher.forward(request, response); 
+			
 		//response.getWriter().append("Served at: ").append(request.getContextPath());
 	}
 
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 * 
 	 */
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		doGet(request, response);
+	}
 	
 public void adicionarSessao(Cliente modelParametro, HttpServletRequest request ) {
 	
@@ -100,18 +99,6 @@ public void adicionarSessao(Cliente modelParametro, HttpServletRequest request )
 				
 		
 		
-	}
-
-
-
-
-
-
-
-
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		doGet(request, response);
 	}
 
 }

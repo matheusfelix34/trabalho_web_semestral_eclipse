@@ -58,11 +58,12 @@
         <div class="text-center">
             <input type="submit" value="Cadastrar" class="btn btn-success">
             <input type="reset" value="Reset" class="btn btn-danger">
+            
         </div>
         <br><br>
     </div>
 </form>
-<button onclick="goBack()">Voltar</button>
+<button onclick="goBack()">Voltar1</button>
 
 <script>
 function goBack() {
