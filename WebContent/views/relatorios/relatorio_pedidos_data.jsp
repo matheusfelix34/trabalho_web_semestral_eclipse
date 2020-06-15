@@ -151,14 +151,10 @@
                 
               </tr>
             </thead>
-            <%
-        	HttpSession sessao = request.getSession();
-    		Pedido pedid =  (Pedido) sessao.getAttribute("atributoPedido");
-    		
-			%>
+       
             <tbody style="visibility: hidden" id="corpo">
               <tr>
-			<td><%=pedid.getId() %></td>
+			<td> ></td>
 			<td>12231223</td>
 			<td>123122132</td>
 			</tr>
