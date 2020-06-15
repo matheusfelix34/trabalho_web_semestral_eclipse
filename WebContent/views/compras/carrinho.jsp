@@ -39,7 +39,7 @@ table, th, td {
 	
 	<%if(produtos == null){		
 	%>
-	<h1>Carrihno vazio!</h1>
+	<h1>Carrinho vazio!</h1>
 	<%}else{ %>
 	
 	<table>
