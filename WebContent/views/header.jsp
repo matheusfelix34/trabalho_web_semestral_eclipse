@@ -35,7 +35,7 @@
                             <a href="../compras/carrinho.jsp">Carrinho de compras</a>
                         </li>
                         <li>
-                            <a href="../clientes/historico_do_pedido.jsp">Historico de pedidos</a>
+                            <a href="../../HistoricoPedido.jsp">Historico de pedidos</a>
                         </li>
                     </ul>
                 </li>

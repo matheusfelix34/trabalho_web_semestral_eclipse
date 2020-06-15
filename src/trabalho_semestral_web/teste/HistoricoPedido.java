@@ -1,11 +1,15 @@
 package trabalho_semestral_web.teste;
 
 import java.io.IOException;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+
+import model.Pedido;
 
 /**
  * Servlet implementation class HistoricoPedido
@@ -26,8 +30,10 @@ public class HistoricoPedido extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		response.getWriter().append("Served at: ").append(request.getContextPath());
+		HttpSession sessao = request.getSession();
+		Pedido pedido = (Pedido) sessao.getAttribute("pedido");
+		
+		response.sendRedirect("views/clientes/historico_do_pedido.jsp");
 	}
 
 	/**
