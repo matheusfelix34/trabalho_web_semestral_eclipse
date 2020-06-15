@@ -30,11 +30,11 @@ public class Pedido {
 		this.prod = prod;
 	}
 	
-	public String getRegistro() {
+	public String getDateRegistro() {
 		return dateRegistro;
 	}
 	
-	public void setRegistro(String dateRegistro) {
+	public void setDateRegistro(String dateRegistro) {
 		this.dateRegistro = dateRegistro;
 	}
 	

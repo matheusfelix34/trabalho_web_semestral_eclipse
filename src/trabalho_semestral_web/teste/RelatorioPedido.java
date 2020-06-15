@@ -7,6 +7,7 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -14,6 +15,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import model.Cliente;
 import model.Pedido;
 import model.Produto;
 
@@ -39,20 +41,27 @@ public class RelatorioPedido extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		
+		 String dateRegistro="";
+		 
+		 if(request.getParameter("dateRegistro") != null && !request.getParameter("dateRegistro").equals("")) {
+			 dateRegistro = request.getParameter("dateRegistro");
+			}
+		 
 		Produto prod[] = new Produto[1];
 		prod[0] = new Produto("iphone", 25);
-		String param = request.getParameter("data_final");
+		//String param = request.getParameter("data_final");
 		
-			Pedido ped = new Pedido(115, prod, param);
+			Pedido ped = new Pedido(115, prod, dateRegistro);
 			
-			HttpSession exSessao = request.getSession();
-			exSessao.setAttribute("atributoPedido", ped);
+			adicionarSessao(ped, request);
+			/*HttpSession exSessao = request.getSession();
+			exSessao.setAttribute("atributoPedido", ped);*/
 		
 
+			RequestDispatcher reqDispatcher = request.getRequestDispatcher("views/relatorios/relatpedidos.jsp");
+			reqDispatcher.forward(request, response); 
 
-
-		response.sendRedirect("views/relatorios/relatpedidos.jsp");
+		//response.sendRedirect("views/relatorios/relatpedidos.jsp");
 
 	}
 
@@ -64,6 +73,17 @@ public class RelatorioPedido extends HttpServlet {
 			throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		doGet(request, response);
+	}
+	
+public void adicionarSessao(Pedido modelParametro, HttpServletRequest request ) {
+	
+		
+		//Colocando os atributos na sessão
+		HttpSession exSessao = request.getSession();
+		exSessao.setAttribute("atributoPedido", modelParametro);
+				
+		
+		
 	}
 
 }

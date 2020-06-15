@@ -132,15 +132,16 @@
               </tr>
             </thead>
             <%
-        	HttpSession sessao = request.getSession();
-    		Pedido pedid =  (Pedido) sessao.getAttribute("atributoPedido");
+            HttpSession sessaoRecuperada = request.getSession();
+    		Pedido pedid =  (Pedido) sessaoRecuperada.getAttribute("atributoPedido");
+    		
     		
 			%>
             <tbody  id="corpo">
               <tr>
 			<td><%=pedid.getId() %></td>
 			<td>12231223</td>
-			<td><%=pedid.getRegistro() %></td>
+			<td><%=pedid.getDateRegistro() %></td>
 			</tr>
 		
             </tbody>

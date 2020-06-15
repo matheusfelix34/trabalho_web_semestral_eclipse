@@ -30,13 +30,13 @@
 		
 	%>
 	
-	<%=model.getNome()%> realizado com sucesso!</h1>
+	<%=model.getNome()%> realizado com sucesso! <%=model.getDataNascimento()%> </h1>
     <br>
 <button onclick="goBack()">Voltar</button>
 <script>
 function goBack() {
   window.history.back();
-}
+}//getDataNascimento()
 </script>
 
 

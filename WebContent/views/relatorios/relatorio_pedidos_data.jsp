@@ -138,11 +138,14 @@
         <h2>Relatorio de compras por data:</h2>
         <p>Selececine o intervalo para o relatorio</p>
 
-   
-          <p>Data incial : <input type="date" name="data_incial" id="data_incial" required></p>
-          <p>Data final  : <input type="date" name="data_final" id="data_final" required></p>
-          <p>Agora é só:</p><a href="../../RelatorioPedido" style=""><input type="button" value="Pesquisar" class="btn btn-success"></a>
+   		<form id="formulario" method="post" action="../../RelatorioPedido">
+          <p>Data incial : <input required="required" type="date" name="data_incial" id="data_incial" required></p>
+          <p>Data final  : <input required="required" type="date" name="dateRegistro" id="dateRegistro" required></p>
+          <p>Agora é só:<input type="submit" value="Pesquisar" class="btn btn-success"></a>
+       </form >
 
+       
+        
           <table class="table" id="tabela">
             <thead>
               <tr>
