@@ -58,8 +58,8 @@ public class RelatorioPedido extends HttpServlet {
 			exSessao.setAttribute("atributoPedido", ped);*/
 		
 
-			RequestDispatcher reqDispatcher = request.getRequestDispatcher("views/relatorios/relatpedidos.jsp");
-			reqDispatcher.forward(request, response); 
+			response.sendRedirect("views/relatorios/relatpedidos.jsp");
+
 
 		//response.sendRedirect("views/relatorios/relatpedidos.jsp");
 
