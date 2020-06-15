@@ -63,7 +63,7 @@
         <br><br>
     </div>
 </form>
-<button onclick="goBack()">Voltar1</button>
+<button onclick="goBack()">Voltar</button>
 
 <script>
 function goBack() {
