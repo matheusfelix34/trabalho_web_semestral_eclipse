@@ -46,13 +46,11 @@ public class RelatorioPedido extends HttpServlet {
 			Pedido ped = new Pedido(115, prod, d);
 			HttpSession exSessao = request.getSession();
 			exSessao.setAttribute("atributoPedido", ped);
-			
-
-	
+		
 
 
 
-		response.sendRedirect("views/clientes/cadastro_cliente.jsp");
+		response.sendRedirect("views/relatorios/relatpedidos.jsp");
 
 	}
 
