@@ -143,6 +143,11 @@
 			<td>12231223</td>
 			<td><%=pedid.getDateRegistro() %></td>
 			</tr>
+			 <tr>
+			<td><%=15 %></td>
+			<td>5269495958</td>
+			<td><%=pedid.getDateRegistro() %></td>
+			</tr>
 		
             </tbody>
           </table>
