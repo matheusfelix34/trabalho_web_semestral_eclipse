@@ -39,11 +39,13 @@ public class RelatorioPedido extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		Date d = new Date(0);
 		
 		Produto prod[] = new Produto[1];
 		prod[0] = new Produto("iphone", 25);
-			Pedido ped = new Pedido(115, prod, d);
+		String param = request.getParameter("data_final");
+		
+			Pedido ped = new Pedido(115, prod, param);
+			
 			HttpSession exSessao = request.getSession();
 			exSessao.setAttribute("atributoPedido", ped);
 		

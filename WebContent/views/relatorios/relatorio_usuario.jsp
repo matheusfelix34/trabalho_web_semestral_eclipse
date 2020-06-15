@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+  <%@ page import="model.Cliente" %>
 <!DOCTYPE html>
 <html lang="en" class="no-js">
 <head>
@@ -206,12 +207,11 @@ function FormataStringData(data) {
         <br><br><br>
 <%
 		HttpSession sessaoRecuperada = request.getSession();
-		String nome=sessaoRecuperada.getAttribute("atributoNome").toString();
-		String cpf=sessaoRecuperada.getAttribute("atributoCpf").toString();
+		Cliente cli= (Cliente) sessaoRecuperada.getAttribute("atributoCliente");
 
 	%>
-        <h2>Relatorio de compras do suario:<%=nome%></h2>.
-        <h2>Cpf:<%=cpf%></h2>
+        <h2>Relatorio de compras do suario:<%=cli.getNome()%></h2>.
+        <h2>Cpf:<%=cli.getCpf()%></h2>
         <!-- <p>Selececine o intervalo para o relatorio</p> -->
 
    

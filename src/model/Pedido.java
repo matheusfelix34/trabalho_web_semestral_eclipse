@@ -5,12 +5,12 @@ import java.sql.Date;
 public class Pedido {
 	private int id;
 	private Produto prod[];
-	private Date registro;
+	private String dateRegistro;
 	
-	public Pedido(int id, Produto prod[], Date registro) {
+	public Pedido(int id, Produto prod[], String dateRegistro) {
 		this.id = id;
 		this.prod = prod;	
-		this.registro = registro;
+		this.dateRegistro = dateRegistro;
 		
 	}
 
@@ -30,12 +30,12 @@ public class Pedido {
 		this.prod = prod;
 	}
 	
-	public Date  getRegistro() {
-		return registro;
+	public String getRegistro() {
+		return dateRegistro;
 	}
 	
-	public void setRegistro(Date registro) {
-		this.registro = registro;
+	public void setRegistro(String dateRegistro) {
+		this.dateRegistro = dateRegistro;
 	}
 	
 	
