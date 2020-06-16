@@ -35,17 +35,17 @@
         <tbody>
         <tr>
             <th scope="row">1</th>
-            <td><a href="pedido.html">116511651656565165</a></td>
+            <td><a href="pedido.jsp">116511651656565165</a></td>
             <td>05/03/2020</td>
         </tr>
         <tr>
             <th scope="row">2</th>
-            <td><a href="pedido.html">789511651656565165</a></td>
+            <td><a href="pedido.jsp">789511651656565165</a></td>
             <td>29/03/2020</td>
         </tr>
         <tr>
             <th scope="row">3</th>
-            <td><a href="pedido.html">145511651656565165</a></td>
+            <td><a href="pedido.jsp">145511651656565165</a></td>
             <td>18/03/2020</td>
         </tr>
         </tbody>

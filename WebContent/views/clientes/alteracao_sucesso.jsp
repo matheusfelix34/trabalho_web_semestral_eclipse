@@ -26,17 +26,26 @@
     </script>
 </head>
 <body>
-<h1 class="display-1 text-center">Cadastro de cliente</h1>
+<h1 class="display-1 text-center">Alteração no cadastro do cliente:</h1>
 
 <h1 class="display-4 text-center"><%
+   
 		 HttpSession sessaoRecuperada = request.getSession();
 	
-	Cliente model = (Cliente)sessaoRecuperada.getAttribute("atributoCliente");
+	Cliente model = (Cliente)sessaoRecuperada.getAttribute("atributoCliente"); 
 		 
 		
 	%>
 	
-	Alteracao no cadastro do usuario <%=model.getNome()%> realizada com sucesso!</h1>
+	 <% if(model==null){ %>
+			 
+			  Exemplo realizado com sucesso!  </h1>
+        
+        
+			 
+	<%}else{%>
+	 <%=model.getNome()%> realizada com sucesso!  </h1>
+		<%}%>
     <br>
   <!--   <p class="text-center"><a href="../loja/index.jsp">Ir para página principal</a></p>  -->
       <!-- <a class="navbar-brand" href="../loja/index.jsp">Loja Virtual</a>  -->

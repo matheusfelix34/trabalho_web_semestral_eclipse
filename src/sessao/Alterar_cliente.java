@@ -71,12 +71,18 @@ public class Alterar_cliente extends HttpServlet {
 			}
 		 
 		 Cliente exModel = new Cliente(nome,cpf,rg,dataNascimento,endereço,senha);
-		 adicionarSessao(exModel, request);
+			HttpSession exSessao = request.getSession();
+			exSessao.setAttribute("atributoNome", nome);
+			
+			
+			
+			response.sendRedirect("alteracao_sucesso.jsp");
+		/* adicionarSessao(exModel, request);
 		 
 		 
 		 
 		 RequestDispatcher reqDispatcher = request.getRequestDispatcher("views/clientes/alteracao_sucesso.jsp");
-			reqDispatcher.forward(request, response); 
+			reqDispatcher.forward(request, response); */
 			
 		//response.getWriter().append("Served at: ").append(request.getContextPath());
 	}

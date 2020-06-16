@@ -33,9 +33,9 @@ public class Excluir_cliente extends HttpServlet {
 		HttpSession exSessao = request.getSession();
 		exSessao.removeAttribute("atributoCliente");
 		
-		
-		RequestDispatcher reqDispatcher = request.getRequestDispatcher("views/clientes/exclusao_sucedida.jsp");
-		reqDispatcher.forward(request, response); 
+		response.sendRedirect("views/clientes/exclusao_sucedida.jsp");
+		/*RequestDispatcher reqDispatcher = request.getRequestDispatcher("views/clientes/exclusao_sucedida.jsp");
+		reqDispatcher.forward(request, response); */
 		
 		//response.getWriter().append("Served at: ").append(request.getContextPath());
 	}

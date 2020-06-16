@@ -38,8 +38,6 @@
 
 </div>
 <!-- /.container -->
-<button onclick="goBack()">Voltar</button>
-<button id="myButton" class="float-left submit-button" >Voltar ao páina principal</button>
 
 <script type="text/javascript">
     document.getElementById("myButton").onclick = function () {

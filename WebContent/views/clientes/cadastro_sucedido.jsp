@@ -20,7 +20,7 @@
     </script>
 </head>
 <body>
-<h1 class="display-1 text-center">Cadastro de cliente</h1>
+<h1 class="display-1 text-center">Cadastro do cliente</h1>
 
 <h1 class="display-4 text-center"><%
 		 HttpSession sessaoRecuperada = request.getSession();
@@ -30,7 +30,22 @@
 		
 	%>
 	
-	<%=model.getNome()%> realizado com sucesso! <%=model.getDataNascimento()%> </h1>
+	
+	
+	
+	
+	<% if(model==null){ %>
+			 
+			  Exemplo realizado com sucesso!  </h1>
+        
+        
+			 
+	<%}else{%>
+	 <%=model.getNome()%> realizado com sucesso!  </h1>
+		<%}%>
+	
+	
+	
     <br>
 <button onclick="goBack()">Voltar</button>
 <script>
