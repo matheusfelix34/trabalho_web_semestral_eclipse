@@ -38,8 +38,8 @@ public class InserirNoCarrinho extends HttpServlet {
 		out = response.getWriter();
 
 		if(sessao.getAttribute("lstNomes") == null) {
-			List<String> lstNomes = new ArrayList<>();
-			List<String> lstPrecos = new ArrayList<>();
+			List<String> lstNomes = new ArrayList();
+			List<String> lstPrecos = new ArrayList();
 
 			String nome = request.getParameter("nome");
 			String preco = request.getParameter("preco");

@@ -76,7 +76,8 @@ public class Alterar_cliente extends HttpServlet {
 			
 			
 			
-			response.sendRedirect("alteracao_sucesso.jsp");
+			response.sendRedirect("views/clientes/alteracao_sucesso.jsp");
+			
 		/* adicionarSessao(exModel, request);
 		 
 		 

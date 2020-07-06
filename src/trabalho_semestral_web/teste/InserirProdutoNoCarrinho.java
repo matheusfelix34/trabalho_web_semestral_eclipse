@@ -11,6 +11,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+import org.json.JSONArray;
+import org.json.JSONObject;
 
 import model.Produto;
 
@@ -33,7 +35,7 @@ public class InserirProdutoNoCarrinho extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		HttpSession sessao = request.getSession();
+	/*	HttpSession sessao = request.getSession();
 
 		PrintWriter out;
 		response.setContentType("text/html;charset=UTF-8");
@@ -44,7 +46,7 @@ public class InserirProdutoNoCarrinho extends HttpServlet {
 		Produto p = new Produto(nome, preco);
 
 		if(sessao.getAttribute("lstProdutos") == null) {
-			List<Produto> produtos = new ArrayList<>();
+			List<Produto> produtos = new ArrayList();
 			produtos.add(p);
 
 			sessao.setAttribute("lstProdutos", produtos);
@@ -62,15 +64,44 @@ public class InserirProdutoNoCarrinho extends HttpServlet {
 
 		}
 
-		out.println("\"<span><a href='javascript:history.back()'>[Voltar ao index]</a></span>\"");
+		out.println("\"<span><a href='javascript:history.back()'>[Voltar ao index]</a></span>\""); */
 	}
 
-	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
-	 */
+	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		String nome = request.getParameter("nome");
+		Double preco = Double.parseDouble(request.getParameter("preco"));
+		 
+		HttpSession sessao = request.getSession();
+		
+		
+		Produto p = new Produto(nome, preco);
+
+		
+		////
+
+		if(sessao.getAttribute("lstProdutos") == null) {
+			List<Produto> produtos = new ArrayList();
+			produtos.add(p);
+
+			sessao.setAttribute("lstProdutos", produtos);
+
+			
+		}else {
+			List<Produto> produtos = (List<Produto>) sessao.getAttribute("lstProdutos");
+			
+			produtos.add(p);
+
+			sessao.setAttribute("lstProdutos", produtos);
+
+
+			
+		}
+		
+		// response.getWriter().print(""); 
+		 // response.getWriter().print("Hello "+ name + "!!"+"vc tem "+idade+" anos de idade" );
 		// TODO Auto-generated method stub
-		doGet(request, response);
+		//doGet(request, response);
 	}
 
 }

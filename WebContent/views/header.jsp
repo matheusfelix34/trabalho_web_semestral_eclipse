@@ -46,7 +46,7 @@
                             <a href="../clientes/cadastro_cliente.jsp">Cadastrar cliente</a>
                         </li>
                         <li>
-                            <a href="consulta_altera_exclui.jsp">Excluir ou alterar cliente</a>
+                            <a href="../clientes/consulta_altera_exclui.jsp">Excluir ou alterar cliente</a>
                         </li>
                     </ul>
                 </li>
@@ -65,7 +65,7 @@
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">Usuario <b class="caret"></b></a>
                     <ul class="dropdown-menu">
                         <li class="active">
-                            <a href="alteracao.jsp">Alterar conta</a>
+                            <a href="../clientes/alteracao.jsp">Alterar conta</a>
                         </li>
                         <li class="active">
                             <a href="../loja/login.jsp">Sair</a>
